@@ -1,0 +1,21 @@
+body {
+  background-color: #1b1c1e;
+  font-family: "Poppins";
+}
+
+.dummyBtn {
+  background-color: yellow;
+  border: 1px solid white;
+  color: white;
+  padding: 14px 20px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.dummyBtn :hover {
+  background-color: green;
+  color: green;
+}
+/*# sourceMappingURL=portalAuth.css.map */
