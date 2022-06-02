@@ -9,4 +9,6 @@ Firebase Initialization:
 3. Deploy with: firebase deploy
 
 Styling:
-This project is styled using SASS as a preprocessor.
+
+1. This project is styled using SASS as a preprocessor.
+2. The file universal.css contains the set of uniform page stylings including variables and settings.
