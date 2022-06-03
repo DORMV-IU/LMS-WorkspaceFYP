@@ -137,9 +137,11 @@ body {
     height: 220px;
     width: 100%;
 
-    p {
-      margin-top: 10px;
-      line-height: 30px;
+    li {
+      list-style-type: bullet;
+      font-size: 13.5px;
+      margin-top: 20px;
+      line-height: 25px;
     }
   }
 }

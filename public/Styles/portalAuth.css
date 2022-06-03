@@ -153,8 +153,6 @@ body {
   height: 1px;
   width: 100%;
   background-color: whitesmoke;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .inquiryChannels .channels {
@@ -163,8 +161,10 @@ body {
   width: 100%;
 }
 
-.inquiryChannels .channels p {
-  margin-top: 10px;
-  line-height: 30px;
+.inquiryChannels .channels li {
+  list-style-type: bullet;
+  font-size: 13.5px;
+  margin-top: 20px;
+  line-height: 25px;
 }
 /*# sourceMappingURL=portalAuth.css.map */
