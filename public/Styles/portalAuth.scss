@@ -123,6 +123,19 @@ body {
   color: whitesmoke;
   padding: 45px;
 
+  button {
+    background: white;
+    color: var(--muddyBlue);
+    outline: 0;
+    border: 0;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 900;
+    margin-right: 7.5px;
+  }
+
   h3 {
     margin-top: 35px;
   }
