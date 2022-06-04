@@ -168,3 +168,73 @@ body {
   line-height: 25px;
 }
 /*# sourceMappingURL=portalAuth.css.map */
+.strname {
+  margin-left: 70em;
+  color: #f0f0f0;
+}
+.contents {
+  padding-left: 6%;
+}
+.grids {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 1em;  
+}
+.grids > .text-box{
+  padding: 20px;
+  overflow-y: scroll;
+}
+.grids > div{
+  background-color: rgb(255, 255, 255);
+  height: 350px;
+  width: 500px;
+  padding: 1em;
+  margin-top: 2em;
+  margin-left: 2em;
+  -webkit-box-shadow: var(--softShadows);
+  box-shadow: var(--softShadows);
+}
+.title-div {
+  border: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-top: 2px solid rgb(216, 216, 216);
+}
+.desc {
+  color: #757575;
+}
+.subinfo {
+  display: grid;
+  grid-template-columns: 75% 25% 100%;
+  grid-auto-rows: minmax(10px, auto);
+  overflow-x: hidden;
+  border-bottom: 2px solid rgb(216, 216, 216);
+  margin-bottom: 10px;
+}
+.list {
+  padding-left: 20px;
+}
+li.active, li:hover {
+  border-left: 5px solid #ffffff;
+  color: #4fbbe6;
+}
+td {
+  height: 50px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+h4 {
+  color: #337AB7;
+}
+h6 {
+  font-weight: 400;
+  color: #b4b4b4;
+  
+}
+h5 {
+  font-size: large;
+  color: #37B9F4;
+}
+.stud-info > div:nth-child(odd) {
+  background-color: aliceblue;
+}

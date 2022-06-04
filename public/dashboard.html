@@ -53,13 +53,72 @@
     ></script>
   </head>
   <body>
+    <!-- Menu Bar -->
+    <div class="wrapper">
+      <nav>
+        <input type="checkbox" id="show-search">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <div class="content">
+          <img src="./Images/logo.png" style="height:3em" alt="nileunilogo" class="logo" />
+        <!-- <div class="logo"><a href="#">Test</a></div> -->
+          <!-- <ul class="links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="#" class="desktop-link">Features</a>
+              <input type="checkbox" id="show-features">
+              <label for="show-features">Features</label>
+              <ul>
+                <li><a href="#">Drop Menu 1</a></li>
+                <li><a href="#">Drop Menu 2</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+                <li><a href="#">Drop Menu 4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="desktop-link">Services</a>
+              <input type="checkbox" id="show-services">
+              <label for="show-services">Services</label>
+              <ul>
+                <li><a href="#">Drop Menu 1</a></li>
+                <li><a href="#">Drop Menu 2</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+                <li>
+                  <a href="#" class="desktop-link">More Items</a>
+                  <input type="checkbox" id="show-items">
+                  <label for="show-items">More Items</label>
+                  <ul>
+                    <li><a href="#">Sub Menu 1</a></li>
+                    <li><a href="#">Sub Menu 2</a></li>
+                    <li><a href="#">Sub Menu 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Feedback</a></li>
+          </ul> -->
+        </div>
+        <label class="strname">
+          <label class="logout-icon"><i class="fa-regular fa-user"></i></label>
+          Daniel Rowlands</label>
+        <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+        <form action="#" class="search-box">
+          <input type="text" placeholder="Type Something to Search..." required>
+          <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+        </form>
+        
+      </nav>
+    </div>
+    <!-- Menu Bar Ends -->
     <input type="checkbox" id="check">
     <label for="check">
       <i class="fas fa-bars" id="btn"></i>
       <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
-      <header>Nile University</header>
+      <header>...</header>
+
       <a href="#" class="active">
         <i class="fas fa-qrcode"></i>
         <span>Dashboard</span>
@@ -88,6 +147,171 @@
         <i class="far fa-envelope"></i>
         <span>Contact</span>
       </a>
+    </div>
+    <!-- MAIN DIV -->
+    <div style="height: 80px; width: 100%;"></div>
+    <div class="contents">
+      <div class="flex">
+        <div class="grids">
+          <!-- First box -->
+          <div class="text-box">
+            <header><h5>Personal Announcement/Links</h5></header>
+            <hr class="title-div"/>
+            <div class="desc">
+              <div class="list">
+                <ul>
+                  <li>Covid-19 Announcement</li>
+                  <li>Career Day Sign-up listing</li>
+                  <li>School Counselor invites students to...</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Second box -->
+          <div class="text-box">
+            <header><h5>News</h5></header>
+            <hr class="title-div"/>
+            <div class="desc">
+              <table style="width:100%">
+                <tr>
+                  <td>
+                    <h4>The Student Commumity board proposes that all stu...</h4>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt rerum ea...</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Nile University Student nutrition and dietics Dep...</h4>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt rerum ea...</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Raggae Fever and Various event at Nile</h4>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt rerum ea...</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>New Covid-19 Restrictions are to be imple...</h4>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt rerum ea...</h6>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!-- Third box -->
+          <div class="text-box">
+            <header class="title"><h5>Student Information</h5></header>
+            <hr class="title-div"/>
+            <div class="desc">
+              <table class="stud-info" style="width:100%">
+                <tr>
+                  <td>Student Name:</td>
+                  <td>Daniel Rowlands</td>
+                </tr>
+                <tr>
+                  <td>Student No:</td>
+                  <td>NS1770130</td>
+                </tr>
+                <tr>
+                  <td>Date of Birth:</td>
+                  <td>01/03/2002</td>
+                </tr>
+                <tr>
+                  <td>Department:</td>
+                  <td>Computer Engineering</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <!-- Fourth box -->
+          <div class="text-box">
+            <header><h5>Department info</h5></header>
+            <hr class="title-div"/>
+            <div class="desc">
+              <table class="stud-info" style="width:100%">
+                <tr>
+                  <td>Status:</td>
+                  <td>Registered</td>
+                </tr>
+                <tr>
+                  <td>Advisor:</td>
+                  <td>Dr. Chief Daddy man</td>
+                </tr>
+                <tr>
+                  <td>CGPA:</td>
+                  <td>3.6</td>
+                </tr>
+                <tr>
+                  <td>Old Debts:</td>
+                  <td>None</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="text-box">
+            <header><h5>Spring Semester Desc.</h5></header>
+            <hr class="title-div"/>
+            <div class="desc">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Modi voluptates quo cum iste enim, doloremque quisquam 
+                laboriosam optio odit soluta dolorum. Vero quisquam eaque
+                minima obcaecati temporibus fugiat? Hic, voluptate. 
+                overflow: scroll;
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Modi voluptates quo cum iste enim, doloremque quisquam 
+                laboriosam optio odit soluta dolorum. Vero quisquam eaque
+                minima obcaecati temporibus fugiat? Hic, voluptate. 
+                overflow: scroll;
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Modi voluptates quo cum iste enim, doloremque quisquam 
+                laboriosam optio odit soluta dolorum. Vero quisquam eaque
+                minima obcaecati temporibus fugiat? Hic, voluptate. 
+                overflow: scroll;
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Modi voluptates quo cum iste enim, doloremque quisquam 
+                laboriosam optio odit soluta dolorum. Vero quisquam eaque
+                minima obcaecati temporibus fugiat? Hic, voluptate. 
+                </p>
+            </div>
+          </div>
+          <!-- Fifth box -->
+          <div class="text-box">
+            <header><h5>Semester Courses</h5></header>
+            <hr class="title-div"/>
+            <div class="desc">
+              <div class="subinfo">
+                <div>Linear Algebra</div>
+                <div> <i class="fa-solid fa-clock"></i> 06/03/2022</div><br/>
+                <div><i class="fa-solid fa-user-tie"></i> Professor John Micheal</p</div>
+              </div>
+            </div>
+            <div class="desc">
+              <div class="subinfo">
+                <div>Computer Organisation</div>
+                <div> <i class="fa-solid fa-clock"></i> 06/04/2022</div><br/>
+                <div><i class="fa-solid fa-user-tie"></i> Dr Il-nam Park</p</div>
+              </div>
+            </div>
+            <div class="desc">
+              <div class="subinfo">
+                <div>English Language</div>
+                <div> <i class="fa-solid fa-clock"></i> 06/12/2022</div><br/>
+                <div><i class="fa-solid fa-user-tie"></i> Professor Anna Kendrick</p</div>
+              </div>
+            </div>
+            <div class="desc">
+              <div class="subinfo">
+                <div>Intro to operating systems</div>
+                <div> <i class="fa-solid fa-clock"></i> 06/01/2022</div><br/>
+                <div><i class="fa-solid fa-user-tie"></i> Dr. Ewan Mcgregor</p</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
     </div>
 </body>
 </html>
