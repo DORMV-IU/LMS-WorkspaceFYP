@@ -6,7 +6,7 @@
   display: flex;
   width: 100%;
   height: 70px;
-  background-color: white;
+  background-color: #0D3059;
   -webkit-box-shadow: var(--softShadows);
           box-shadow: var(--softShadows);
   -webkit-box-align: center;
@@ -45,7 +45,7 @@
   width: 240px;
   left: -240px;
   height: 100%;
-  background: rgba(0, 0, 139, 0.85);
+  background: #133E70;
   -webkit-box-shadow: var(--hardShadows);
           box-shadow: var(--hardShadows);
   -webkit-transition: all 0.3s ease;
@@ -143,7 +143,7 @@
 label #btn,
 label #cancel {
   cursor: pointer;
-  color: var(--muddyBlue);
+  color: white;
   border-radius: 5px;
   margin: 15px 30px;
   font-size: 18px;
@@ -164,3 +164,91 @@ label #cancel {
   left: 0;
 }
 /*# sourceMappingURL=portalDash.css.map */
+.strname {
+  margin-left: 70em;
+  color: #f0f0f0;
+}
+.contents {
+  padding-left: 6%;
+}
+.grids {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 1em;  
+}
+.grids > .text-box{
+  padding: 20px;
+  overflow-y: scroll;
+}
+.grids > div{
+  background-color: rgb(255, 255, 255);
+  height: 350px;
+  width: 500px;
+  padding: 1em;
+  margin-top: 2em;
+  margin-left: 2em;
+  -webkit-box-shadow: var(--softShadows);
+  box-shadow: var(--softShadows);
+}
+.title-div {
+  border: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-top: 2px solid rgb(216, 216, 216);
+}
+.desc {
+  color: #757575;
+}
+.subinfo {
+  display: grid;
+  grid-template-columns: 75% 25% 100%;
+  grid-auto-rows: minmax(10px, auto);
+  overflow-x: hidden;
+  border-bottom: 2px solid rgb(216, 216, 216);
+  margin-bottom: 10px;
+}
+.list {
+  padding-left: 20px;
+}
+li.active, li:hover {
+  border-left: 5px solid #ffffff;
+  color: #4fbbe6;
+}
+td {
+  height: 50px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+h4 {
+  color: #337AB7;
+}
+h6 {
+  font-weight: 400;
+  color: #b4b4b4;
+  
+}
+h5 {
+  font-size: large;
+  color: #37B9F4;
+}
+.stud-info > div:nth-child(odd) {
+  background-color: aliceblue;
+}
+.piechart {
+  margin-left: 120px;
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+      pink 70deg, 
+      lightblue 0 235deg, 
+      orange 0);
+}
+
+.piechart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
