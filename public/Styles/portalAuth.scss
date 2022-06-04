@@ -123,6 +123,29 @@ body {
   color: whitesmoke;
   padding: 45px;
 
+  button {
+    background: transparent;
+    color: whitesmoke;
+    outline: 0;
+    border: 1.5px solid whitesmoke;
+    // padding: 12px 30px;
+    width: 45px;
+    height: 45px;
+    font-weight: bold;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
+    margin-right: 7.5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      box-shadow: var(--hardShadows);
+      color: var(--muddyBlue);
+      background: whitesmoke;
+    }
+  }
+
   h3 {
     margin-top: 35px;
   }

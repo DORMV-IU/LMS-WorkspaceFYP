@@ -145,6 +145,30 @@ body {
   padding: 45px;
 }
 
+.inquiryChannels button {
+  background: transparent;
+  color: whitesmoke;
+  outline: 0;
+  border: 1.5px solid whitesmoke;
+  width: 45px;
+  height: 45px;
+  font-weight: bold;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 900;
+  margin-right: 7.5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.inquiryChannels button:hover {
+  -webkit-box-shadow: var(--hardShadows);
+          box-shadow: var(--hardShadows);
+  color: var(--muddyBlue);
+  background: whitesmoke;
+}
+
 .inquiryChannels h3 {
   margin-top: 35px;
 }
