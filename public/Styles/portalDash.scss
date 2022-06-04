@@ -8,6 +8,7 @@
   background-color: white;
   box-shadow: var(--softShadows);
   align-items: center;
+  justify-content: space-between;
   //   position: fixed;
 
   .logo {
@@ -21,13 +22,22 @@
   }
 }
 
+#userImage {
+  height: 100%;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
 .sidebar {
   position: fixed;
-  overflow-y: auto;
+  overflow: auto;
   width: 240px;
   left: -240px;
   height: 100%;
   background: rgba(0, 0, 139, 0.85);
+  box-shadow: var(--hardShadows);
   transition: all 0.3s ease;
 
   header {
@@ -45,14 +55,6 @@
     user-select: none;
     font-family: "Montserrat", sans-serif;
 
-    img {
-      height: 100%;
-      border-radius: 50%;
-      margin-right: 5px;
-      margin-left: 10px;
-      cursor: pointer;
-    }
-
     .txt {
       margin-left: 10px;
       text-align: left;
@@ -62,6 +64,7 @@
       h3 {
         font-size: 12px;
         margin-bottom: 5px;
+        cursor: pointer;
       }
 
       p {
