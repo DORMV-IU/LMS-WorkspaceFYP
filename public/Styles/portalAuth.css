@@ -146,16 +146,27 @@ body {
 }
 
 .inquiryChannels button {
-  background: white;
-  color: var(--muddyBlue);
+  background: transparent;
+  color: whitesmoke;
   outline: 0;
-  border: 0;
-  padding: 12px 30px;
+  border: 1.5px solid whitesmoke;
+  width: 45px;
+  height: 45px;
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: 50%;
   font-size: 12px;
   font-weight: 900;
   margin-right: 7.5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.inquiryChannels button:hover {
+  -webkit-box-shadow: var(--hardShadows);
+          box-shadow: var(--hardShadows);
+  color: var(--muddyBlue);
+  background: whitesmoke;
 }
 
 .inquiryChannels h3 {

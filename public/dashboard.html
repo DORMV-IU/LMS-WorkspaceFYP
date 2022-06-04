@@ -47,7 +47,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="stylesheet" href="./Styles/sidebar.css" />
+    <link rel="stylesheet" href="./Styles/portalDash.css" />
 
     <!-- SCRIPTS -->
     <script
@@ -56,13 +56,25 @@
     ></script>
   </head>
   <body>
+    <header class="main">
+      <div class="logo">
+        <img src="./Images/logo.png" alt="logo" />
+
+        <label for="check">
+          <i class="fas fa-bars" id="btn"></i>
+          <i class="fas fa-times" id="cancel"></i>
+        </label>
+      </div>
+    </header>
     <input type="checkbox" id="check" />
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
     <div class="sidebar">
-      <header>Nile University</header>
+      <header>
+        <img src="./Images/portrait2.jpg" alt="userImage" />
+        <div class="txt">
+          <h3 class="name">{username}</h3>
+          <p>Studying</p>
+        </div>
+      </header>
       <a href="#" class="active">
         <i class="fas fa-qrcode"></i>
         <span>Dashboard</span>
@@ -92,7 +104,7 @@
         <span>Contact</span>
       </a>
       <a href="./lms/index.html">
-        <i class="fa-solid fa-chalkboard-user"></i>
+        <i class="fa-solid fa-book-open-reader"></i>
         <span>L. M. S.</span>
       </a>
       <a id="logOut" href="#">

@@ -128,12 +128,26 @@
           class="divider"
           style="margin-top: 20px; margin-bottom: 20px"
         ></div>
-
-        <button id="googleLoginBtn" onclick="googleLogin()">
-          Login with Google <i class="fa-brands fa-google"></i>
+        <button
+          title="NUN Home"
+          onclick="window.open('https://www.nileuniversity.edu.ng/')"
+        >
+          <i class="fa-solid fa-house"></i>
         </button>
-        <button class="lmsBtn">
-          L. M. S. <i class="fa-solid fa-book-open-reader"></i>
+
+        <button
+          title="Google Login"
+          id="googleLoginBtn"
+          onclick="googleLogin()"
+        >
+          <i class="fa-brands fa-google"></i>
+        </button>
+        <button
+          class="lmsBtn"
+          title="Learning Management System"
+          onclick="window.open('./lms/index.html')"
+        >
+          <i class="fa-solid fa-book-open-reader"></i>
         </button>
 
         <!-- <p>
