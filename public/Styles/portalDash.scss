@@ -1,6 +1,8 @@
 @import url("./universal.css");
 
 .main {
+  //   position: relative;
+  //   z-index: 1000;
   padding: 15px;
   display: flex;
   width: 100%;
@@ -27,6 +29,7 @@
   border-radius: 50%;
   margin-right: 5px;
   margin-left: 10px;
+  border: 3px solid transparent;
   cursor: pointer;
 }
 
@@ -45,13 +48,13 @@
     // justify-content: center;
     align-items: center;
     font-size: 28px;
-    color: white;
+    color: var(--blackTwo);
     height: 70px;
     width: 100%;
     padding: 15px;
     /* line-height: 70px; */
     text-align: center;
-    // background: rgba(0, 0, 139, 0.85);
+    background: White;
     user-select: none;
     font-family: "Montserrat", sans-serif;
 
@@ -63,14 +66,15 @@
 
       h3 {
         font-size: 12px;
-        margin-bottom: 5px;
+        margin-bottom: 4px;
         cursor: pointer;
       }
 
       p {
         font-size: 8px;
         font-weight: bold;
-        color: #9fd590;
+        // color: #9fd590;
+        color: #6ec058;
       }
     }
   }
@@ -107,12 +111,12 @@
 
     &.active {
       border-left: 5px solid transparent;
-      background: #242933;
+      background: var(--blackTwo);
       color: #398bf7;
 
       &hover {
         border-left: 5px solid transparent;
-        background: #242933;
+        background: var(--blackTwo);
       }
     }
   }

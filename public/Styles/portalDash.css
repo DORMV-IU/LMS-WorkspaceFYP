@@ -36,6 +36,7 @@
   border-radius: 50%;
   margin-right: 5px;
   margin-left: 10px;
+  border: 3px solid transparent;
   cursor: pointer;
 }
 
@@ -60,12 +61,13 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 28px;
-  color: white;
+  color: var(--blackTwo);
   height: 70px;
   width: 100%;
   padding: 15px;
   /* line-height: 70px; */
   text-align: center;
+  background: White;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -82,14 +84,14 @@
 
 .sidebar header .txt h3 {
   font-size: 12px;
-  margin-bottom: 5px;
+  margin-bottom: 4 px;
   cursor: pointer;
 }
 
 .sidebar header .txt p {
   font-size: 8px;
   font-weight: bold;
-  color: #9fd590;
+  color: #6ec058;
 }
 
 .sidebar a {
@@ -127,13 +129,13 @@
 
 .sidebar a.active {
   border-left: 5px solid transparent;
-  background: #242933;
+  background: var(--blackTwo);
   color: #398bf7;
 }
 
 .sidebar a.activehover {
   border-left: 5px solid transparent;
-  background: #242933;
+  background: var(--blackTwo);
 }
 
 #check {
