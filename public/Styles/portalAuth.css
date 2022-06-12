@@ -40,7 +40,7 @@ body {
 
 .loginBox h3,
 .loginBox p {
-  color: #276c2a;
+  color: var(--green);
 }
 
 .loginBox h3 {
@@ -53,7 +53,7 @@ body {
   font-size: 14px;
 }
 
-.loginBox form input[type="text"] {
+.loginBox form input {
   width: 100%;
   padding: 15px;
   margin-top: 10px;
@@ -65,19 +65,19 @@ body {
   letter-spacing: 0.5px;
 }
 
-.loginBox form input[type="text"]::-webkit-input-placeholder {
+.loginBox form input::-webkit-input-placeholder {
   color: rgba(160, 160, 160, 0.4);
 }
 
-.loginBox form input[type="text"]:-ms-input-placeholder {
+.loginBox form input:-ms-input-placeholder {
   color: rgba(160, 160, 160, 0.4);
 }
 
-.loginBox form input[type="text"]::-ms-input-placeholder {
+.loginBox form input::-ms-input-placeholder {
   color: rgba(160, 160, 160, 0.4);
 }
 
-.loginBox form input[type="text"]::placeholder {
+.loginBox form input::placeholder {
   color: rgba(160, 160, 160, 0.4);
 }
 
@@ -145,11 +145,16 @@ body {
   padding: 45px;
 }
 
-.inquiryChannels button {
+.inquiryChannels .channel-bottom-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inquiryChannels .brBtn,
+.inquiryChannels .lmsBtn {
   background: transparent;
-  color: whitesmoke;
   outline: 0;
-  border: 1.5px solid whitesmoke;
   width: 45px;
   height: 45px;
   font-weight: bold;
@@ -162,11 +167,29 @@ body {
   transition: 0.3s ease;
 }
 
-.inquiryChannels button:hover {
+.inquiryChannels .brBtn {
+  color: whitesmoke;
+  border: 1.5px solid whitesmoke;
+}
+
+.inquiryChannels .brBtn:hover {
   -webkit-box-shadow: var(--hardShadows);
           box-shadow: var(--hardShadows);
   color: var(--muddyBlue);
   background: whitesmoke;
+}
+
+.inquiryChannels .lmsBtn {
+  color: var(--goldTwo);
+  border: 1.5px solid var(--goldTwo);
+}
+
+.inquiryChannels .lmsBtn:hover {
+  -webkit-box-shadow: var(--hardShadows);
+          box-shadow: var(--hardShadows);
+  color: var(--muddyBlue);
+  border: 1.5px solid var(--goldTwo);
+  background: var(--goldTwo);
 }
 
 .inquiryChannels h3 {
@@ -190,5 +213,10 @@ body {
   font-size: 13.5px;
   margin-top: 20px;
   line-height: 25px;
+}
+
+#sisShowBtn,
+#pms {
+  display: none;
 }
 /*# sourceMappingURL=portalAuth.css.map */

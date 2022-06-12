@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | Student Information System</title>
 
+    <style>
+      @media screen and (max-width: 600px) {
+        .loginWrapper {
+          display: none;
+        }
+
+        .notDesktopMode {
+          display: block;
+        }
+      }
+    </style>
+
     <!-- FIREBASE -->
     <script defer src="/__/firebase/9.8.2/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -39,32 +51,42 @@
 
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <script src="./Js/auth.js" defer></script>
-
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="./Styles/portalAuth.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./Images/fav/LMS.svg"
+      sizes="20x20"
+    />
 
     <!-- SCRIPTS -->
+    <script src="./Js/auth.prerequisites.js" defer></script>
+    <script src="./Js/auth.users.js" defer></script>
+    <script src="./Js/portal.js" defer></script>
+    <script src="./Js/universal.js" defer></script>
     <script
       src="https://kit.fontawesome.com/d72d59cfcd.js"
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
-    <!-- Login Box -->
+    <!-- !!SEPERATION!! -->
+    <!-- Student Login Box -->
     <div class="loginWrapper">
-      <div class="loginBox">
+      <div class="loginBox" id="sis">
         <img src="./Images/logo.png" alt="nileunilogo" class="logo" />
 
         <h3 id="testName">LOGIN</h3>
         <p>Student Information System (SIS)</p>
 
-        <form action="./dashboard.html">
+        <form>
           <input type="text" name="id" placeholder="Enter your ID" />
-          <input type="text" name="pwd" placeholder="Enter Password" />
+          <input type="password" name="pwd" placeholder="Enter Password" />
           <div class="authRow">
             <button id="loginBtn">Login</button>
-            <a href="#">Forgot? Reset Password</a>
+            <a href="./HTML/featureUnavailable.html">Forgot? Reset Password</a>
           </div>
         </form>
         <p class="powered">
@@ -72,6 +94,31 @@
           <span style="color: #ffcb2b"><i class="fa-solid fa-fire"></i></span>
         </p>
       </div>
+
+      <!-- !!SEPERATION!! -->
+      <!-- Personnel Login Box -->
+      <div class="loginBox" id="pms">
+        <img src="./Images/logo.png" alt="nileunilogo" class="logo" />
+
+        <h3 id="testName">LOGIN</h3>
+        <p>Personnel Management System (PMS)</p>
+
+        <form>
+          <input type="text" name="id" placeholder="Enter your ID" />
+          <input type="password" name="pwd" placeholder="Enter Password" />
+          <div class="authRow">
+            <button id="loginBtn">Login</button>
+            <!--TODO-->
+            <a href="./HTML/featureUnavailable.html">Forgot? Reset Password</a>
+          </div>
+        </form>
+        <p class="powered">
+          Powered By Firebase
+          <span style="color: #ffcb2b"><i class="fa-solid fa-fire"></i></span>
+        </p>
+      </div>
+
+      <!-- !!SEPERATION!! -->
       <!-- Inquiry Channels -->
       <div class="inquiryChannels">
         <h2>Inquiry Channels</h2>
@@ -128,36 +175,61 @@
           class="divider"
           style="margin-top: 20px; margin-bottom: 20px"
         ></div>
-        <button
-          title="NUN Home"
-          onclick="window.open('https://www.nileuniversity.edu.ng/')"
-        >
-          <i class="fa-solid fa-house"></i>
-        </button>
 
-        <button
-          title="Google Login"
-          id="googleLoginBtn"
-          onclick="googleLogin()"
-        >
-          <i class="fa-brands fa-google"></i>
-        </button>
-        <button
-          class="lmsBtn"
-          title="Learning Management System"
-          onclick="window.open('./lms/index.html')"
-        >
-          <i class="fa-solid fa-book-open-reader"></i>
-        </button>
+        <div class="channel-bottom-row">
+          <button
+            class="brBtn"
+            title="NUN Home"
+            onclick="window.open('https://www.nileuniversity.edu.ng/')"
+          >
+            <i class="fa-solid fa-house"></i>
+          </button>
 
-        <!-- <p>
-          Created By
-          <span style="color: #ffcb2b"
-            ><i alt="181212004" class="fa-solid fa-carrot"></i
-          ></span>
-        </p> -->
+          <button
+            class="brBtn"
+            title="Personnel Management System"
+            id="pmsShowBtn"
+          >
+            <i class="fa-solid fa-vr-cardboard"></i>
+          </button>
+
+          <button
+            class="brBtn"
+            title="Student Information System"
+            id="sisShowBtn"
+          >
+            <i class="fa-solid fa-vr-cardboard"></i>
+          </button>
+
+          <button
+            class="lmsBtn"
+            title="Learning Management System"
+            onclick="window.location.href='./HTML/featureUnavailable.html'"
+          >
+            <!--TODO-->
+            <i class="fa-solid fa-graduation-cap"></i>
+          </button>
+          <button
+            class="brBtn"
+            title="Help: Usage Documentation"
+            onclick="window.open('https://docs.google.com/document/d/1lpaT0z3yvZw88rzL99vY31iAVvVhJyWD_kDdQ4oBH5w/edit?usp=sharing')"
+          >
+            <!-- <i class="fa-solid fa-info"></i> -->
+            <i class="fa-solid fa-question"></i>
+            <!-- <i class="fa-solid fa-file-circle-question"></i> -->
+          </button>
+          <button
+            class="brBtn"
+            title="Dev Administration"
+            onclick="window.location.href='./HTML/devAdminRegistration.html'"
+          >
+            <i class="fa-solid fa-code"></i>
+          </button>
+        </div>
       </div>
     </div>
-    <div class="notDesktopMode"></div>
+    <div class="notDesktopMode">
+      <h3>Please use the Desktop Version of the Platform</h3>
+    </div>
   </body>
 </html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Student Information System</title>
+
+    <style>
+      @media screen and (max-width: 600px) {
+        .loginWrapper {
+          display: none;
+        }
+
+        .notDesktopMode {
+          display: block;
+        }
+      }
+    </style>
+
+    <!-- FIREBASE -->
+    <script defer src="/__/firebase/9.8.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.8.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.8.2/firebase-database-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/9.8.2/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-performance-compat.js"
+    ></script>
+
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../Styles/devAdRe.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../Images/fav/LMS.svg"
+      sizes="20x20"
+    />
+
+    <!-- SCRIPTS -->
+    <script src="../Js/auth.prerequisites.js" defer></script>
+    <script src="../Js/auth.users.js" defer></script>
+    <script src="../Js/universal.js" defer></script>
+    <script src="../Js/devAdRe.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/d72d59cfcd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- !!SEPERATION!! -->
+    <!-- Student Login Box -->
+    <div class="loginWrapper">
+      <div class="regBox" id="devAdRe">
+        <a href="../index.html"
+          ><img
+            title="Portal Home"
+            src="../Images/logo.png"
+            alt="nileunilogo"
+            class="logo"
+        /></a>
+
+        <h3 id="testName">User Registration</h3>
+        <p>Developer Admin Portal (DAP)</p>
+
+        <form id="regForm">
+          <fieldset>
+            <h5>Main User Info</h5>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter User Email"
+              autofocus
+              required
+            />
+            <input
+              type="password"
+              id="pwd"
+              name="pwd"
+              placeholder="Enter User Password"
+              required
+            />
+            <input
+              type="password"
+              id="conpwd"
+              placeholder="Confirm User Password"
+            />
+            <div class="divider"></div>
+          </fieldset>
+          <fieldset>
+            <h5>Account Type</h5>
+            <ul class="account_types">
+              <li>
+                <input
+                  type="radio"
+                  id="student"
+                  name="account_type"
+                  value="student"
+                  checked
+                />
+                <label for="student">Student</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="personnel"
+                  name="account_type"
+                  value="personnel"
+                />
+                <label for="personnel">Personnel</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="admin"
+                  name="account_type"
+                  value="admin"
+                />
+                <label for="admin">Administrator</label>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+          </fieldset>
+          <!-- !!SEPERATION!! -->
+          <fieldset id="student-field">
+            <h5>Student Bio Information</h5>
+            <input
+              type="text"
+              id="nameFirst"
+              placeholder="Student First Name"
+              required
+            />
+            <input
+              type="text"
+              id="nameMiddle"
+              placeholder="Student Middle Name"
+              required
+            />
+            <input
+              type="text"
+              id="nameLast"
+              placeholder="Student Last Name"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter Telephone"
+              maxlength="11"
+              minlength="11"
+              required
+            />
+            <div class="divider"></div>
+
+            <!-- !!SEPERATION!! -->
+            <fieldset>
+              <h5>Academic Information</h5>
+              <select
+                name="department"
+                id="department"
+                placeholder="Department"
+                required
+              >
+                <option value="">--Select a Department--</option>
+                <option value="Software Engineering">
+                  Software Engineering
+                </option>
+                <option value="Information Technology">
+                  Information Technology
+                </option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Nigerian Law">Nigerian Law</option>
+                <option value="Medicine">Medicine</option>
+              </select>
+              <input
+                type="number"
+                minlength="9"
+                maxlength="9"
+                placeholder="Student Identification Number"
+                id="sid"
+              />
+              <div class="divider"></div>
+            </fieldset>
+          </fieldset>
+
+          <fieldset id="personnel-field">
+            <h5>Personnel Bio Information</h5>
+            <input
+              type="text"
+              id="nameFirst"
+              placeholder="Personnel First Name"
+              required
+            />
+            <input
+              type="text"
+              id="nameMiddle"
+              placeholder="Personnel Middle Name"
+              required
+            />
+            <input
+              type="text"
+              id="nameLast"
+              placeholder="Personnel Last Name"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter Telephone"
+              maxlength="11"
+              minlength="11"
+              required
+            />
+            <div class="divider"></div>
+
+            <!-- !!SEPERATION!! -->
+            <fieldset>
+              <h5>Occupational Information</h5>
+              <select
+                name="department"
+                id="department"
+                placeholder="Department"
+                required
+              >
+                <option value="">--Select a Department--</option>
+                <option value="Software Engineering">
+                  Software Engineering
+                </option>
+                <option value="Information Technology">
+                  Information Technology
+                </option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Nigerian Law">Nigerian Law</option>
+                <option value="Medicine">Medicine</option>
+              </select>
+              <input
+                type="number"
+                minlength="9"
+                maxlength="9"
+                placeholder="Personnel Identification Number"
+                id="pid"
+              />
+              <div class="divider"></div>
+            </fieldset>
+          </fieldset>
+
+          <fieldset id="admin-field">
+            <h5>Admin Bio Information</h5>
+            <input
+              type="text"
+              id="nameFirst"
+              placeholder="Administrator First Name"
+              required
+            />
+            <input
+              type="text"
+              id="nameMiddle"
+              placeholder="Administrator Middle Name"
+              required
+            />
+            <input
+              type="text"
+              id="nameLast"
+              placeholder="Administrator Last Name"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter Telephone"
+              maxlength="11"
+              minlength="11"
+              required
+            />
+            <div class="divider"></div>
+            <fieldset>
+              <h5>Administrative Parameters</h5>
+              <input
+                type="text"
+                id="genKeyInput"
+                placeholder="Admin Key"
+                style="
+                  font-weight: bold;
+                  font-family: 'Roboto';
+                  letter-spacing: 1px;
+                "
+                required
+                readonly
+              />
+              <button id="genKey">
+                <i
+                  class="fa-solid fa-unlock-keyhole"
+                  style="margin-right: 4px"
+                ></i>
+                Generate Key
+              </button>
+              <div class="divider"></div>
+            </fieldset>
+          </fieldset>
+
+          <!-- !!SEPERATION!! -->
+          <fieldset>
+            <h5>Miscellaneous Data</h5>
+
+            <br />
+            <label for="user_photo">User Photo</label>
+            <input
+              type="file"
+              name="user_photo"
+              id="userPhoto"
+              accept="image/png, image/jpeg, image/jpg"
+            />
+
+            <div class="divider"></div>
+          </fieldset>
+          <div class="authRow">
+            <button type="submit" id="regBtn">Register User</button>
+          </div>
+        </form>
+
+        <p class="powered">
+          Powered By Firebase
+          <span style="color: #ffcb2b"><i class="fa-solid fa-fire"></i></span>
+        </p>
+        <p class="down-ang"><i class="fa-solid fa-angles-down"></i></p>
+      </div>
+    </div>
+    <div class="notDesktopMode">
+      <h3>Please use the Desktop Version of the Platform</h3>
+    </div>
+  </body>
+</html>
