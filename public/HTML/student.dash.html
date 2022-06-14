@@ -39,8 +39,6 @@
 
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <script src="../Js/auth.prerequisites.js" defer></script>
-
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="../Styles/portalAuth.css" />
     <link rel="icon" type="image/x-icon"  href="../Images/fav/LMS.svg" sizes="20x20">
@@ -48,9 +46,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="stylesheet" href="./Styles/portalDash.css" />
+    <link rel="stylesheet" href="../Styles/portalDash.css" />
 
     <!-- SCRIPTS -->
+    <script src="../Js/auth.prerequisites.js" defer></script>
+    <script src="../Js/auth.state-management.logout.js" defer></script>
+    <script src="../Js/app.dash.js" defer></script>
+    
+
     <script
       src="https://kit.fontawesome.com/d72d59cfcd.js"
       crossorigin="anonymous"
@@ -59,23 +62,25 @@
   <body>
     <header class="main">
       <div class="logo">
-        <img src="./Images/logo.png" alt="logo" />
+        <img src="../Images/logo.png" alt="logo" />
 
         <label for="check">
           <i class="fas fa-bars" id="btn"></i>
           <i class="fas fa-times" id="cancel"></i>
         </label>
       </div>
-      <img id="userImage" src="./Images/portrait2.jpg" alt="userImage" />
+      <div class="displayImage">
+        <h3 class="username">{username}</h3>
+        <img class="userImage" src="../Images/portrait2.jpg" alt="userImage" />
+      </div>
     </header>
     <input type="checkbox" id="check" />
     <div class="sidebar">
       <header>
-        <img id="userImage" src="./Images/portrait2.jpg" alt="userImage" />
         <div class="txt">
-          <h3 class="name">{username}</h3>
-          <p>Studying</p>
-        </div>
+        <p>Student<br><span style = "color: #6ec058; font-weight: bold; letter-spacing: 3px;">Account</span></p>
+      </div>
+    </header>
       </header>
       <a href="#" class="active">
         <i class="fas fa-qrcode"></i>
@@ -105,12 +110,12 @@
         <i class="far fa-envelope"></i>
         <span>Contact</span>
       </a>
-      <a href="./lms/index.html">
+      <a href="./featureUnavailable.html">
         <i class="fa-solid fa-book-open-reader"></i>
         <span>L. M. S.</span>
       </a>
       </a>
-      <a id="logOut" href="#">
+      <a id="logOut">
         <i class="fa-solid fa-power-off"></i>
         <span>Logout</span>
       </a>
@@ -259,5 +264,7 @@
         </div>
       </div>  
     </div>
+    <!-- <script src="../Js/universal.js" ></script> -->
+
   </body>
 </html>

@@ -24,7 +24,7 @@
   }
 }
 
-#userImage {
+.userImage {
   height: 100%;
   border-radius: 50%;
   margin-right: 5px;
@@ -33,19 +33,38 @@
   cursor: pointer;
 }
 
+.displayImage {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  h3 {
+    margin-right: 10px;
+    font-size: 12px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    width: 70%;
+    letter-spacing: 0.5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+
+    // background-color: greenyellow;
+  }
+}
+
 .sidebar {
   position: fixed;
   overflow: auto;
   width: 240px;
   left: -240px;
   height: 100%;
-  background: rgba(0, 0, 139, 0.85);
+  background: rgba(0, 0, 139, 0.95);
   box-shadow: var(--hardShadows);
   transition: all 0.3s ease;
 
   header {
     display: flex;
-    // justify-content: center;
+    justify-content: center;
     align-items: center;
     font-size: 28px;
     color: var(--blackTwo);
@@ -56,39 +75,35 @@
     text-align: center;
     background: White;
     user-select: none;
-    font-family: "Montserrat", sans-serif;
 
     .txt {
-      margin-left: 10px;
+      display: flex;
+      width: 100%;
+      // background-color: gray;
+      justify-content: center;
+      align-items: center;
       text-align: left;
       font-family: "Poppins", sans-serif;
       letter-spacing: 1px;
-
-      h3 {
-        font-size: 12px;
-        margin-bottom: 4px;
-        cursor: pointer;
-      }
+      text-transform: uppercase;
 
       p {
-        font-size: 8px;
-        font-weight: bold;
-        // color: #9fd590;
-        color: #6ec058;
+        font-size: 14px;
+        // font-weight: bold;
+        text-align: center;
+        color: var(--blackTwo);
+        letter-spacing: 1px;
       }
     }
   }
 
   a {
+    cursor: pointer;
     display: block;
     padding: 18px 30px;
     width: 100%;
     color: white;
-    /* line-height: 65px; */
-    /* padding-left: 30px; */
     box-sizing: border-box;
-    /* border-bottom: 1px solid black; */
-    /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
     border-left: 5px solid transparent;
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
@@ -128,14 +143,11 @@
 
 label #btn,
 label #cancel {
-  //   position: absolute;
   cursor: pointer;
   color: var(--muddyBlue);
   border-radius: 5px;
-  //   border: 1px solid #262626;
   margin: 15px 30px;
   font-size: 18px;
-  //   background: rgba(0, 0, 139, 0.85);
   height: 45px;
   width: 45px;
   text-align: center;

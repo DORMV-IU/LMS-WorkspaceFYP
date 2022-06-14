@@ -7,14 +7,8 @@
     <title>Login | Student Information System</title>
 
     <style>
-      @media screen and (max-width: 600px) {
-        .loginWrapper {
-          display: none;
-        }
-
-        .notDesktopMode {
-          display: block;
-        }
+      .notDesktopMode {
+        display: none;
       }
     </style>
 
@@ -62,9 +56,9 @@
 
     <!-- SCRIPTS -->
     <script src="../Js/auth.prerequisites.js" defer></script>
-    <script src="../Js/auth.users.js" defer></script>
-    <script src="../Js/universal.js" defer></script>
+    <script src="../Js/auth.user-registration.js" defer></script>
     <script src="../Js/devAdRe.js" defer></script>
+    <!-- <script src="../Js/auth.state-management.js" defer></script> -->
     <script
       src="https://kit.fontawesome.com/d72d59cfcd.js"
       crossorigin="anonymous"
@@ -73,7 +67,7 @@
 
   <body>
     <!-- !!SEPERATION!! -->
-    <!-- Student Login Box -->
+    <!-- Registration Box -->
     <div class="loginWrapper">
       <div class="regBox" id="devAdRe">
         <a href="../index.html"
@@ -93,13 +87,14 @@
             <input
               type="email"
               name="email"
+              id="regEmail"
               placeholder="Enter User Email"
               autofocus
               required
             />
             <input
               type="password"
-              id="pwd"
+              id="regPwd"
               name="pwd"
               placeholder="Enter User Password"
               required
@@ -151,25 +146,25 @@
             <h5>Student Bio Information</h5>
             <input
               type="text"
-              id="nameFirst"
+              id="studentNameFirst"
               placeholder="Student First Name"
               required
             />
             <input
               type="text"
-              id="nameMiddle"
+              id="studentNameMiddle"
               placeholder="Student Middle Name"
               required
             />
             <input
               type="text"
-              id="nameLast"
+              id="studentNameLast"
               placeholder="Student Last Name"
               required
             />
             <input
               type="tel"
-              id="phone"
+              id="studentPhone"
               placeholder="Enter Telephone"
               maxlength="11"
               minlength="11"
@@ -182,7 +177,7 @@
               <h5>Academic Information</h5>
               <select
                 name="department"
-                id="department"
+                id="studentDepartment"
                 placeholder="Department"
                 required
               >
@@ -199,11 +194,11 @@
                 <option value="Medicine">Medicine</option>
               </select>
               <input
-                type="number"
+                type="tel"
                 minlength="9"
                 maxlength="9"
                 placeholder="Student Identification Number"
-                id="sid"
+                id="studentIdentificationNumber"
               />
               <div class="divider"></div>
             </fieldset>
@@ -213,25 +208,25 @@
             <h5>Personnel Bio Information</h5>
             <input
               type="text"
-              id="nameFirst"
+              id="personnelNameFirst"
               placeholder="Personnel First Name"
               required
             />
             <input
               type="text"
-              id="nameMiddle"
+              id="personnelNameMiddle"
               placeholder="Personnel Middle Name"
               required
             />
             <input
               type="text"
-              id="nameLast"
+              id="personnelNameLast"
               placeholder="Personnel Last Name"
               required
             />
             <input
               type="tel"
-              id="phone"
+              id="personnelPhone"
               placeholder="Enter Telephone"
               maxlength="11"
               minlength="11"
@@ -244,7 +239,7 @@
               <h5>Occupational Information</h5>
               <select
                 name="department"
-                id="department"
+                id="personnelDepartment"
                 placeholder="Department"
                 required
               >
@@ -261,11 +256,11 @@
                 <option value="Medicine">Medicine</option>
               </select>
               <input
-                type="number"
+                type="tel"
                 minlength="9"
                 maxlength="9"
                 placeholder="Personnel Identification Number"
-                id="pid"
+                id="personnelIdentificationNumber"
               />
               <div class="divider"></div>
             </fieldset>
@@ -275,25 +270,25 @@
             <h5>Admin Bio Information</h5>
             <input
               type="text"
-              id="nameFirst"
+              id="adminNameFirst"
               placeholder="Administrator First Name"
               required
             />
             <input
               type="text"
-              id="nameMiddle"
+              id="adminNameMiddle"
               placeholder="Administrator Middle Name"
               required
             />
             <input
               type="text"
-              id="nameLast"
+              id="adminNameLast"
               placeholder="Administrator Last Name"
               required
             />
             <input
               type="tel"
-              id="phone"
+              id="adminPhone"
               placeholder="Enter Telephone"
               maxlength="11"
               minlength="11"
@@ -355,5 +350,39 @@
     <div class="notDesktopMode">
       <h3>Please use the Desktop Version of the Platform</h3>
     </div>
+    <script src="../Js/universal.js"></script>
+    <script>
+      const studentRadio = document.querySelector("#student"),
+        personnelRadio = document.querySelector("#personnel"),
+        adminRadio = document.querySelector("#admin"),
+        studentField = document.querySelector("#student-field"),
+        personnelField = document.querySelector("#personnel-field"),
+        adminField = document.querySelector("#admin-field");
+
+      //SWITCH ACOUNT TYPE BASED ON CHECKED RADIO
+      const isChecked = () => {
+        if (studentRadio.checked) {
+          //display elements
+          studentField.style.display = "block";
+          personnelField.style.display = "none";
+          adminField.style.display = "none";
+        } else if (personnelRadio.checked) {
+          //display elements
+          studentField.style.display = "none";
+          personnelField.style.display = "block";
+          adminField.style.display = "none";
+        } else if (adminRadio.checked) {
+          //display elements
+          studentField.style.display = "none";
+          personnelField.style.display = "none";
+          adminField.style.display = "block";
+        }
+
+        studentField.disabled = studentRadio.checked ? false : true;
+        personnelField.disabled = personnelRadio.checked ? false : true;
+        adminField.disabled = adminRadio.checked ? false : true;
+      };
+      isChecked();
+    </script>
   </body>
 </html>
