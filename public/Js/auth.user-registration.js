@@ -4,6 +4,8 @@ const regBtn = document.querySelector("#regBtn");
 const regEmail = document.querySelector("#regEmail");
 const regPwd = document.querySelector("#regPwd");
 const confirm_password = document.getElementById("conpwd");
+const fileInput = document.querySelector("#userPhoto");
+const userImageRef = storageRef.child("users/profile_images");
 
 // REGISTER USER !!SEPERATION!!
 registrationForm.addEventListener("submit", (e) => {
@@ -59,30 +61,76 @@ registrationForm.addEventListener("submit", (e) => {
         // REGISTER SECONDARY USER DATA BASED ON ACCOUNT TYPE WITH THE GENERATED UID
         //COLLECTION: USERS
 
-        return db
-          .collection("users")
-          .doc(credentials.user.uid)
-          .set({
-            accountType: typeOfAccount,
-            accountTypeData: accountTypeData,
-          })
-          .then(() => {
-            if (typeOfAccount === "admin") {
-              return db
-                .collection("adminKeys")
-                .doc(credentials.user.id)
-                .set({
-                  key: document.querySelector("#genKeyInput").value,
-                  timeStamp: Date.now(),
-                })
-                .then(() => {
-                  document.querySelector("form").reset();
-                });
-            } else {
-              document.querySelector("form").reset();
-              auth.signOut();
-            }
+        //SAVE PROOFILE PICTURE
+        const selectedFile = fileInput.files[0];
+        let fileRef;
+
+        if (selectedFile) {
+          fileRef = userImageRef.child(`${credentials.user.uid}/profile.jpg`);
+          fileRef.put(selectedFile).then(() => {
+            userImageRef
+              .child(`${credentials.user.uid}/profile.jpg`)
+              .getDownloadURL()
+              .then(function (url) {
+                return db
+                  .collection("users")
+                  .doc(credentials.user.uid)
+                  .set({
+                    accountType: typeOfAccount,
+                    accountTypeData: accountTypeData,
+                    created: new Date().toLocaleDateString("en-GB", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    }),
+                    profilePhotoUrl: url,
+                  })
+                  .then(() => {
+                    if (typeOfAccount === "admin") {
+                      return db
+                        .collection("adminKeys")
+                        .doc(credentials.user.id)
+                        .set({
+                          key: document.querySelector("#genKeyInput").value,
+                        })
+                        .then(() => {
+                          document.querySelector("form").reset();
+                        });
+                    } else {
+                      document.querySelector("form").reset();
+                      auth.signOut();
+                    }
+                  });
+              })
+              .catch((err) => {
+                switch (err.code) {
+                  case "storage/object-not-found":
+                    // File doesn't exist
+                    console.log("File doesn't exist");
+                    break;
+                  case "storage/unauthorized":
+                    // User doesn't have permission to access the object
+                    console.log(
+                      "User doesn't have permission to access the object"
+                    );
+
+                    break;
+                  case "storage/canceled":
+                    // User canceled the upload
+                    console.log("User canceled the upload");
+                    break;
+
+                  // ...
+
+                  case "storage/unknown":
+                    // Unknown error occurred, inspect the server response
+                    break;
+                }
+              });
           });
+        } else {
+          fileRef = "";
+        }
       })
       .then(() => {
         alert(`User Registered Successfully`);

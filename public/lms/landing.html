@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Management System | NUN Applications</title>
+
+    <!-- FIREBASE -->
+    <script defer src="/__/firebase/9.8.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.8.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.8.2/firebase-database-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/9.8.2/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-performance-compat.js"
+    ></script>
+
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <script src="./Js/auth.js" defer></script>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="./CSS/landing.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./Images/Logos/Fav1alt.svg"
+      sizes="20x20"
+    />
+
+    <!-- SCRIPTS -->
+    <script
+      src="https://kit.fontawesome.com/d72d59cfcd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- !!SEPERATION!! -->
+  <body>
+    <!-- <button>Create New Document</button> -->
+    <div class="app-container">
+      <div class="app">
+        <div class="sidebar" title="sidebar">
+          <header>
+            <img src="./Images/Logos/LMS_LG1.svg" alt="LMS Logo" />
+            <!-- <p>learning Management <br />system</p> -->
+          </header>
+          <div class="menu-items">
+            <ul>
+              <li>
+                <a class="active" href=""
+                  ><span
+                    ><i class="fa-solid fa-house-chimney"></i> Home</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span
+                    ><i class="fa-solid fa-lines-leaning"></i> My Courses</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><span
+                    ><i class="fa-solid fa-pen"></i> Manage Courses</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="acc-sys-items">
+            <p>
+              learning <br />management <br />system <br /><i
+                class="fa-solid fa-angles-down"
+              ></i>
+            </p>
+          </div>
+        </div>
+        <div class="page">
+          <nav>
+            <ul class="left">
+              <li>
+                <a id="ftBtn" class="active" href="">Featured</a>
+              </li>
+              <li><a id="acBtn" href="">All Courses</a></li>
+              <li>
+                <a id="csBtn" href="">Coming Soon</a>
+              </li>
+              <li>
+                <a id="acBtn" href="./HTML/featureUnavailable.html">News</a>
+              </li>
+            </ul>
+            <div class="right">
+              <form action="./HTML/featureUnavailable.html">
+                <input type="text" />
+                <button>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+              <div class="vertical_line"></div>
+              <div class="userImage"><i class="fa-solid fa-user"></i></div>
+              <div class="userInfo">
+                <div class="header">
+                  <h2>Wëndigõ</h2>
+                  <span class="closeBtn"
+                    ><i class="fa-solid fa-xmark"></i
+                  ></span>
+                </div>
+                <div class="line"></div>
+                <ul>
+                  <li><a href="./HTML/featureUnavailable.html">Account</a></li>
+                  <li><a href="./HTML/featureUnavailable.html">Settings</a></li>
+                </ul>
+                <div class="line"></div>
+                <ul>
+                  <li>
+                    <a href="./HTML/featureUnavailable.html"
+                      >Terms of Service</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./HTML/featureUnavailable.html">Privacy Policy</a>
+                  </li>
+                </ul>
+                <div class="line"></div>
+                <ul>
+                  <li><a id="signOutBtn" href="">Sign Out</a></li>
+                </ul>
+              </div>
+              <div class="modal_background"></div>
+            </div>
+          </nav>
+          <!-- CONTENT !!SEPERATION!! -->
+          <div class="content">
+            <div id="featured" class="featured">
+              <div class="welcome">
+                <h3>Learning That <br />Empowers</h3>
+                <p>
+                  Donec ultrices tincidunt arcu non sodales neque sodales ut
+                  etiam.
+                </p>
+                <button id="lm">Learn More</button>
+              </div>
+            </div>
+            <div id="all-courses" class="all-courses">
+              <header class="title">
+                <p class="heading">Courses</p>
+              </header>
+              <div class="courses">
+                <div class="course-row">
+                  <div class="course">
+                    <div
+                      style="
+                        background: url('./Images/Default_Thumbnails/pexels-anna-nekrashevich-6801648.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                      "
+                      class="thumbnail"
+                    >
+                      <div class="overlay">
+                        <i class="fa-solid fa-angles-right"></i>
+                      </div>
+                    </div>
+                    <div class="info">
+                      <h2>Data Analysis for Beginners</h2>
+                      <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Donec ultrices tincidunt arcu non sodales
+                        neque sodales ut etiam.
+                      </p>
+                      <p class="creator">Fedrick Okon | Ph. D</p>
+                    </div>
+                  </div>
+                  <div class="course">
+                    <div
+                      style="
+                        background: url('./Images/Default_Thumbnails/Game\ \(1\).jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                      "
+                      class="thumbnail"
+                    >
+                      <div class="overlay">
+                        <i class="fa-solid fa-angles-right"></i>
+                      </div>
+                    </div>
+                    <div class="info">
+                      <h2>Mobile Game Development with Unity and C#</h2>
+                      <p class="description">
+                        Aenean sed adipiscing diam donec adipiscing tristique
+                        risus nec. Scelerisque felis imperdiet proin fermentum
+                        leo vel orci porta non.
+                      </p>
+                      <p class="creator">Michelle Darin | Ms. C</p>
+                    </div>
+                  </div>
+                  <div class="course">
+                    <div
+                      style="
+                        background: url('./Images/Default_Thumbnails/alexander-shatov-mr4JG4SYOF8-unsplash.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                      "
+                      class="thumbnail"
+                    >
+                      <div class="overlay">
+                        <i class="fa-solid fa-angles-right"></i>
+                      </div>
+                    </div>
+                    <div class="info">
+                      <h2>
+                        UI/UX Design for Beginners with Adobe XD and Figma
+                      </h2>
+                      <p class="description">
+                        Egestas diam in arcu cursus euismod quis. Imperdiet
+                        nulla malesuada pellentesque elit eget gravida cum
+                        sociis natoque.
+                      </p>
+                      <p class="creator">Ibukun Balogun | Ph. D</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- COMING SOON !!SEPERATION!! -->
+            <div id="coming-soon" class="all-courses">
+              <header class="title">
+                <p class="heading">Coming Soon</p>
+              </header>
+              <div class="courses">
+                <div class="course-row">
+                  <div class="course">
+                    <div
+                      style="
+                        background: url('./Images/Default_Thumbnails/pexels-alex-knight-2599244.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                      "
+                      class="thumbnail"
+                    >
+                      <div class="cs_bar">coming soon</div>
+                    </div>
+                    <div class="info">
+                      <h2>Artificial Intelligence with python</h2>
+                      <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Donec ultrices tincidunt arcu non sodales
+                        neque sodales ut etiam.
+                      </p>
+                      <p class="creator">July | 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- !!SEPERATION!! -->
+              <footer>
+                <div class="header">
+                  <ul class="socials">
+                    <li>
+                      <button href="">
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button href="">
+                        <i class="fa-brands fa-instagram"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button href="">
+                        <i class="fa-brands fa-twitter"></i>
+                      </button>
+                      <button href="">
+                        <i class="fa-brands fa-youtube"></i>
+                      </button>
+                    </li>
+                    </li>
+                  </ul>
+                  <button class="backToTop">
+                    <i class="fa-solid fa-angles-up"></i>
+                  </button>
+                </div>
+
+                <div class="resources">
+                  <h2>Resources</h2>
+                  <ul class="links">
+                    <li><a href="">Terms and Services</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Customer Support</a></li>
+                    <li><a href="">Usage Documentation</a></li>
+                    <li><a href="">Dev Registration</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">NUN Home</a></li>
+                    <li><a href="">NUN Portal</a></li>
+                  </ul>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="copy">
+                  <p>&copy; 2022, Nile University of Nigeria.</p>
+                  <img src="./Images/Logos/LMS_LG1.svg" height="30px">
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+
+      const content = document.querySelector(".content");
+      const backToTop = document.querySelector(".backToTop");
+      const ftBtn = document.querySelector("#ftBtn");
+      const acBtn = document.querySelector("#acBtn");
+      const csBtn = document.querySelector("#csBtn");
+      const featured = document.querySelector(".featured");
+      const allCourses = document.querySelector(".all-courses");
+      const comingSoon = document.querySelector("#coming-soon");
+      const modal_background = document.querySelector(".modal_background");
+      const signOutBtn = document.querySelector("#signOutBtn");
+      const closeBtn = document.querySelector(".closeBtn");
+      const userInfo = document.querySelector(".userInfo");
+      const userImage = document.querySelector(".userImage");
+      const learnMore = document.querySelector("#lm");
+
+      const ftPosition = content.offsetTop;
+      const acPosition = allCourses.offsetTop;
+      ftBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        content.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        if (!ftBtn.classList.contains("active")) {
+          ftBtn.classList.add("active");
+          acBtn.classList.remove("active");
+          csBtn.classList.remove("active");
+        }
+      });
+
+      learnMore.addEventListener("click", (e) => {
+        e.preventDefault();
+        content.scrollTo({
+          top: 400,
+          behavior: "smooth",
+        });
+        if (!acBtn.classList.contains("active")) {
+          ftBtn.classList.remove("active");
+          acBtn.classList.add("active");
+          csBtn.classList.remove("active");
+        }
+      });
+
+      acBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        content.scrollTo({
+          top: 400,
+          behavior: "smooth",
+        });
+        if (!acBtn.classList.contains("active")) {
+          ftBtn.classList.remove("active");
+          acBtn.classList.add("active");
+          csBtn.classList.remove("active");
+        }
+      });
+
+      csBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        content.scrollTo({
+          top: comingSoon.offsetTop - 100,
+          behavior: "smooth",
+        });
+        if (!csBtn.classList.contains("active")) {
+          ftBtn.classList.remove("active");
+          acBtn.classList.remove("active");
+          csBtn.classList.add("active");
+        }
+      });
+
+      backToTop.addEventListener("click", (e) => {
+        e.preventDefault();
+        content.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        if (!ftBtn.classList.contains("active")) {
+          ftBtn.classList.add("active");
+          acBtn.classList.remove("active");
+          csBtn.classList.remove("active");
+        }
+      });
+
+      window.addEventListener("scroll", () => {
+        if (window.screenY >= 400) {
+          ftBtn.classList.remove("active");
+          acBtn.classList.add("active");
+          csBtn.classList.remove("active");
+        } else if (window.screenY >= comingSoon.offsetTop - 75) {
+          ftBtn.classList.remove("active");
+          acBtn.classList.remove("active");
+          csBtn.classList.add("active");
+        } else {
+          ftBtn.classList.add("active");
+          acBtn.classList.remove("active");
+          csBtn.classList.remove("active");
+        }
+      });
+
+      closeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal_background.style.opacity = "0";
+        userInfo.style.opacity = "0";
+        modal_background.style.display = "none";
+        userInfo.style.display = "none";
+        userImage.classList.toggle("active");
+      });
+
+      userImage.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal_background.style.opacity = "1";
+        userInfo.style.opacity = "1";
+        modal_background.style.display = "block";
+        userImage.classList.toggle("active");
+        userInfo.style.display = "block";
+      });
+
+      modal_background.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal_background.style.opacity = "0";
+        userInfo.style.opacity = "0";
+        modal_background.style.display = "none";
+        userImage.classList.toggle("active");
+        userInfo.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
+
+<!-- TODO -->
+<!-- 
+  1. Add a new course to the database
+  2. Add a new course to the page
+  3. Add a Width Tracker to ensure the page with does not go lower than the minimum width of the page - 300px
+ -->

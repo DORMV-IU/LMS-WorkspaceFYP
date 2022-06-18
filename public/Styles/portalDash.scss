@@ -30,7 +30,7 @@
   object-fit: cover;
   border-radius: 50%;
   // margin-right: 5px;
-  border: 3px solid transparent;
+  border: 1px solid rgba(27, 28, 30, 0.5);
   box-shadow: var(--insetSoftShadows);
   // cursor: pointer;
 }
@@ -69,7 +69,7 @@
     align-items: center;
     font-size: 28px;
     color: var(--blackTwo);
-    height: 70px;
+    height: 100px;
     width: 100%;
     padding: 15px;
     /* line-height: 70px; */
@@ -80,7 +80,9 @@
     .txt {
       display: flex;
       width: 100%;
-      // background-color: gray;
+      border: 1px solid rgba(27, 28, 30, 0.1);
+      padding: 10px;
+      border-radius: 5px;
       justify-content: center;
       align-items: center;
       text-align: left;
@@ -88,12 +90,18 @@
       letter-spacing: 1px;
       text-transform: uppercase;
 
+      i {
+        margin-right: 15px;
+      }
+
       p {
         font-size: 14px;
         // font-weight: bold;
-        text-align: center;
+        // text-align: center;
         color: var(--blackTwo);
         letter-spacing: 1px;
+        // background-color: #398bf7;
+        // max-width: 90%;
       }
     }
   }

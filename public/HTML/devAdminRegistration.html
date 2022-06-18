@@ -83,30 +83,6 @@
 
         <form id="regForm">
           <fieldset>
-            <h5>Main User Info</h5>
-            <input
-              type="email"
-              name="email"
-              id="regEmail"
-              placeholder="Enter User Email"
-              autofocus
-              required
-            />
-            <input
-              type="password"
-              id="regPwd"
-              name="pwd"
-              placeholder="Enter User Password"
-              required
-            />
-            <input
-              type="password"
-              id="conpwd"
-              placeholder="Confirm User Password"
-            />
-            <div class="divider"></div>
-          </fieldset>
-          <fieldset>
             <h5>Account Type</h5>
             <ul class="account_types">
               <li>
@@ -148,6 +124,7 @@
               type="text"
               id="studentNameFirst"
               placeholder="Student First Name"
+              autofocus
               required
             />
             <input
@@ -210,6 +187,7 @@
               type="text"
               id="personnelNameFirst"
               placeholder="Personnel First Name"
+              autofocus
               required
             />
             <input
@@ -272,6 +250,7 @@
               type="text"
               id="adminNameFirst"
               placeholder="Administrator First Name"
+              autofocus
               required
             />
             <input
@@ -320,6 +299,30 @@
             </fieldset>
           </fieldset>
 
+          <fieldset>
+            <h5>Main User Info</h5>
+            <input
+              type="email"
+              name="email"
+              id="regEmail"
+              placeholder="Enter User Email"
+              required
+            />
+            <input
+              type="password"
+              id="regPwd"
+              name="pwd"
+              placeholder="Enter User Password"
+              required
+            />
+            <input
+              type="password"
+              id="conpwd"
+              placeholder="Confirm User Password"
+            />
+            <div class="divider"></div>
+          </fieldset>
+
           <!-- !!SEPERATION!! -->
           <fieldset>
             <h5>Miscellaneous Data</h5>
@@ -331,6 +334,7 @@
               name="user_photo"
               id="userPhoto"
               accept="image/png, image/jpeg, image/jpg"
+              required
             />
 
             <div class="divider"></div>
