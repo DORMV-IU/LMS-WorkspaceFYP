@@ -1,10 +1,173 @@
 @import url("./universal.lms.css");
+.loginPageContainer {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.loginPageContainer .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.loginPageContainer .title p {
+  text-align: center;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Lato", sans-serif;
+  line-height: 20px;
+}
+
+.loginPageContainer .title p i {
+  -webkit-animation: float 0.5s alternate ease-in-out infinite;
+          animation: float 0.5s alternate ease-in-out infinite;
+}
+
+.loginPageContainer .title img {
+  height: 50px;
+  margin-right: 25px;
+}
+
+.loginPageContainer #loginForm {
+  width: 375px;
+  border-radius: 10px;
+  margin: 20px;
+  border: 1px solid var(--whiteDim);
+  padding: 40px;
+}
+
+.loginPageContainer #loginForm input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: var(--blackOne);
+  border: 1px solid var(--whiteDim);
+  color: var(--whiteOne);
+  outline: 0;
+  border-radius: 5px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+.loginPageContainer #loginForm input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loginPageContainer #loginForm input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loginPageContainer #loginForm input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loginPageContainer #loginForm input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loginPageContainer #loginForm h3,
+.loginPageContainer #loginForm p {
+  color: var(--green);
+}
+
+.loginPageContainer #loginForm h3 {
+  margin-top: 35px;
+}
+
+.loginPageContainer #loginForm p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.loginPageContainer #loginForm .authRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.loginPageContainer #loginForm .authRow button {
+  margin-top: 15px;
+  cursor: pointer;
+  padding: 11px 40px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--whiteDim);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.loginPageContainer #loginForm .authRow button:hover {
+  background: var(--whiteDim);
+  color: var(--whiteOne);
+}
+
+.loginPageContainer #loginForm .authRow a {
+  text-decoration: none;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.loginPageContainer #loginForm .authRow a:hover {
+  text-decoration: underline;
+}
+
+.loginPageContainer #loginForm .powered {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 11px;
+  font-family: "Lato", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.loginPageContainer #loginForm .powered i {
+  margin-left: 3px;
+}
+
 .app-container {
   height: 100%;
   width: 100%;
 }
 
-.app-container .app {
+.app-container .app-landing {
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -13,7 +176,7 @@
   border-radius: 10px;
 }
 
-.app-container .app .sidebar {
+.app-container .app-landing .sidebar {
   height: 100%;
   width: 250px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -29,7 +192,7 @@
           justify-content: flex-end;
 }
 
-.app-container .app .sidebar header {
+.app-container .app-landing .sidebar header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,12 +206,12 @@
   width: 100%;
 }
 
-.app-container .app .sidebar header img {
+.app-container .app-landing .sidebar header img {
   height: 55px;
   margin-right: 10px;
 }
 
-.app-container .app .sidebar header p {
+.app-container .app-landing .sidebar header p {
   text-decoration: none;
   color: var(--whiteOne);
   font-size: 8px;
@@ -58,7 +221,7 @@
   text-transform: capitalize;
 }
 
-.app-container .app .sidebar .acc-sys-items {
+.app-container .app-landing .sidebar .acc-sys-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,7 +235,7 @@
   height: 300px;
 }
 
-.app-container .app .sidebar .acc-sys-items p {
+.app-container .app-landing .sidebar .acc-sys-items p {
   text-align: center;
   font-size: 10px;
   text-transform: uppercase;
@@ -81,17 +244,17 @@
   line-height: 25px;
 }
 
-.app-container .app .sidebar .acc-sys-items p i {
+.app-container .app-landing .sidebar .acc-sys-items p i {
   -webkit-animation: float 0.5s alternate ease-in-out infinite;
           animation: float 0.5s alternate ease-in-out infinite;
 }
 
-.app-container .app .sidebar .menu-items {
+.app-container .app-landing .sidebar .menu-items {
   width: 100%;
   height: 100%;
 }
 
-.app-container .app .sidebar .menu-items ul {
+.app-container .app-landing .sidebar .menu-items ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,7 +266,7 @@
   height: 100%;
 }
 
-.app-container .app .sidebar .menu-items ul li {
+.app-container .app-landing .sidebar .menu-items ul li {
   width: 100%;
   padding: 3.25px 7.5px;
   height: 60px;
@@ -118,7 +281,7 @@
           align-items: center;
 }
 
-.app-container .app .sidebar .menu-items ul li a {
+.app-container .app-landing .sidebar .menu-items ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,29 +305,29 @@
   transition: 0.1s ease-out;
 }
 
-.app-container .app .sidebar .menu-items ul li a.active {
+.app-container .app-landing .sidebar .menu-items ul li a.active {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.app-container .app .sidebar .menu-items ul li a span {
+.app-container .app-landing .sidebar .menu-items ul li a span {
   width: 70%;
 }
 
-.app-container .app .sidebar .menu-items ul li a span i {
+.app-container .app-landing .sidebar .menu-items ul li a span i {
   margin-right: 5px;
 }
 
-.app-container .app .sidebar .menu-items ul li a:hover {
+.app-container .app-landing .sidebar .menu-items ul li a:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.app-container .app .page {
+.app-container .app-landing .page {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-.app-container .app .page nav {
+.app-container .app-landing .page nav {
   height: 100px;
   width: 100%;
   display: -webkit-box;
@@ -173,13 +336,16 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 50px;
   font-size: 12px;
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.5px;
 }
 
-.app-container .app .page nav .left {
+.app-container .app-landing .page nav .left {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,11 +355,11 @@
           align-items: center;
 }
 
-.app-container .app .page nav .left li {
+.app-container .app-landing .page nav .left li {
   list-style-type: none;
 }
 
-.app-container .app .page nav .left li a {
+.app-container .app-landing .page nav .left li a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
   -webkit-transition: 0.2s ease-out;
@@ -201,15 +367,15 @@
   margin-right: 25px;
 }
 
-.app-container .app .page nav .left li a.active {
+.app-container .app-landing .page nav .left li a.active {
   color: var(--whiteOne);
 }
 
-.app-container .app .page nav .left li a:hover {
+.app-container .app-landing .page nav .left li a:hover {
   color: var(--whiteOne);
 }
 
-.app-container .app .page nav .right {
+.app-container .app-landing .page nav .right {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,7 +385,7 @@
           align-items: center;
 }
 
-.app-container .app .page nav .right .userInfo {
+.app-container .app-landing .page nav .right .userInfo {
   position: absolute;
   z-index: 1000;
   width: 350px;
@@ -235,7 +401,7 @@
   display: none;
 }
 
-.app-container .app .page nav .right .userInfo .header {
+.app-container .app-landing .page nav .right .userInfo .header {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -248,14 +414,14 @@
           align-items: center;
 }
 
-.app-container .app .page nav .right .userInfo .header h2 {
+.app-container .app-landing .page nav .right .userInfo .header h2 {
   color: var(--whiteOne);
   font-size: 14px;
   letter-spacing: 0.5px;
   font-family: "Poppins", sans-serif;
 }
 
-.app-container .app .page nav .right .userInfo .header .closeBtn {
+.app-container .app-landing .page nav .right .userInfo .header .closeBtn {
   color: var(--whiteOne);
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -266,18 +432,18 @@
   transition: 0.2s ease-out;
 }
 
-.app-container .app .page nav .right .userInfo .header .closeBtn:hover {
+.app-container .app-landing .page nav .right .userInfo .header .closeBtn:hover {
   color: var(--whiteOne);
 }
 
-.app-container .app .page nav .right .userInfo .line {
+.app-container .app-landing .page nav .right .userInfo .line {
   width: 100%;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.1);
   margin: 20px 0;
 }
 
-.app-container .app .page nav .right .userInfo ul {
+.app-container .app-landing .page nav .right .userInfo ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,7 +454,7 @@
           flex-direction: column;
 }
 
-.app-container .app .page nav .right .userInfo ul li {
+.app-container .app-landing .page nav .right .userInfo ul li {
   width: 100%;
   padding: 10px 0;
   display: -webkit-box;
@@ -296,19 +462,20 @@
   display: flex;
 }
 
-.app-container .app .page nav .right .userInfo ul li a {
+.app-container .app-landing .page nav .right .userInfo ul li a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
 
-.app-container .app .page nav .right .userInfo ul li a:hover {
+.app-container .app-landing .page nav .right .userInfo ul li a:hover {
   color: var(--whiteOne);
 }
 
-.app-container .app .page nav .right .modal_background {
+.app-container .app-landing .page nav .right .modal_background {
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -316,7 +483,7 @@
   display: none;
 }
 
-.app-container .app .page nav .right .userImage {
+.app-container .app-landing .page nav .right .userImage {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,22 +502,113 @@
   transition: 0.2s ease-out;
 }
 
-.app-container .app .page nav .right .userImage:hover {
+.app-container .app-landing .page nav .right .userImage:hover {
   border: 1px solid var(--whiteOne);
 }
 
-.app-container .app .page nav .right .userImage.active {
+.app-container .app-landing .page nav .right .userImage.active {
   border: 1px solid var(--whiteOne);
 }
 
-.app-container .app .page nav .right .vertical_line {
+.app-container .app-landing .page nav .right .vertical_line {
   height: 30px;
   width: 1px;
   background-color: rgba(255, 255, 255, 0.1);
   margin: 0 25px;
 }
 
-.app-container .app .page nav .right form {
+.app-container .app-landing .page nav .right .notify {
+  margin-right: 25px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.app-container .app-landing .page nav .right .notify:hover {
+  color: var(--whiteOne);
+}
+
+.app-container .app-landing .page nav .right .notify.active {
+  color: var(--whiteOne);
+}
+
+.app-container .app-landing .page nav .right .notifications {
+  position: absolute;
+  z-index: 1000;
+  width: 350px;
+  top: 85px;
+  right: 200px;
+  border-radius: 8px;
+  background-color: #202020;
+  -webkit-box-shadow: var(--softShadows);
+          box-shadow: var(--softShadows);
+  padding: 30px 25px;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  display: none;
+}
+
+.app-container .app-landing .page nav .right .notifications .line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+.app-container .app-landing .page nav .right .notifications .no_notif {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.app-container .app-landing .page nav .right .notifications .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-container .app-landing .page nav .right .notifications .header h2 {
+  color: var(--whiteOne);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.app-container .app-landing .page nav .right .notifications .header .closeBtn {
+  color: var(--whiteOne);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.app-container .app-landing .page nav .right .notifications .header .closeBtn:hover {
+  color: var(--whiteOne);
+}
+
+.app-container .app-landing .page nav .right form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,7 +617,7 @@
           align-items: center;
 }
 
-.app-container .app .page nav .right form input {
+.app-container .app-landing .page nav .right form input {
   text-align: right;
   outline: none;
   height: 30px;
@@ -374,7 +632,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.app-container .app .page nav .right form button {
+.app-container .app-landing .page nav .right form button {
   padding: 20px 20px 20px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,7 +652,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.app-container .app .page .content {
+.app-container .app-landing .page .content {
   scroll-behavior: smooth;
   width: 100%;
   height: 100%;
@@ -403,7 +661,7 @@
   overflow-y: auto;
 }
 
-.app-container .app .page .content .featured {
+.app-container .app-landing .page .content .featured {
   position: relative;
   width: 100%;
   height: 350px;
@@ -421,21 +679,21 @@
           align-items: center;
 }
 
-.app-container .app .page .content .featured .welcome {
+.app-container .app-landing .page .content .featured .welcome {
   position: absolute;
   bottom: 50px;
   width: 400px;
   border-radius: 10px;
 }
 
-.app-container .app .page .content .featured .welcome h3 {
+.app-container .app-landing .page .content .featured .welcome h3 {
   color: rgba(0, 0, 0, 0.75);
   font-size: 25px;
   letter-spacing: 0.5px;
   font-family: "Poppins", sans-serif;
 }
 
-.app-container .app .page .content .featured .welcome p {
+.app-container .app-landing .page .content .featured .welcome p {
   margin: 15px 0;
   color: rgba(0, 0, 0, 0.75);
   font-size: 14px;
@@ -443,7 +701,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.app-container .app .page .content .featured .welcome button {
+.app-container .app-landing .page .content .featured .welcome button {
   margin-top: 15px;
   cursor: pointer;
   padding: 12px 25px;
@@ -459,19 +717,19 @@
   transition: 0.2s ease;
 }
 
-.app-container .app .page .content .featured .welcome button:hover {
+.app-container .app-landing .page .content .featured .welcome button:hover {
   background: rgba(0, 0, 0, 0.75);
   color: var(--whiteOne);
 }
 
-.app-container .app .page .content .all-courses {
+.app-container .app-landing .page .content .all-courses {
   width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 50px;
 }
 
-.app-container .app .page .content .all-courses .title {
+.app-container .app-landing .page .content .all-courses .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -482,7 +740,7 @@
           align-items: center;
 }
 
-.app-container .app .page .content .all-courses .title .heading {
+.app-container .app-landing .page .content .all-courses .title .heading {
   text-decoration: none;
   color: var(--whiteOne);
   font-size: 12px;
@@ -490,7 +748,7 @@
   letter-spacing: 0.5px;
 }
 
-.app-container .app .page .content .all-courses .courses {
+.app-container .app-landing .page .content .all-courses .courses {
   width: 100%;
   overflow-y: auto;
   display: -webkit-box;
@@ -506,7 +764,7 @@
           flex: 1;
 }
 
-.app-container .app .page .content .all-courses .courses .course-row {
+.app-container .app-landing .page .content .all-courses .courses .course-row {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -516,7 +774,7 @@
           justify-content: space-between;
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,7 +788,7 @@
   cursor: pointer;
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course .thumbnail {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course .thumbnail {
   overflow: hidden;
   position: relative;
   display: -webkit-box;
@@ -552,7 +810,7 @@
   transition: 0.3s ease;
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course .thumbnail .overlay {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course .thumbnail .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -571,21 +829,21 @@
           box-shadow: var(--insetHardShadows);
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course .thumbnail .overlay i {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course .thumbnail .overlay i {
   opacity: 0;
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course .thumbnail .overlay:hover {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course .thumbnail .overlay:hover {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course .thumbnail .overlay:hover i {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course .thumbnail .overlay:hover i {
   opacity: 1;
   -webkit-animation: L-R 0.5s alternate ease-in-out infinite;
           animation: L-R 0.5s alternate ease-in-out infinite;
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course .thumbnail .cs_bar {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course .thumbnail .cs_bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,13 +865,13 @@
   font-family: "Poppins", sans-serif;
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course .info {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course .info {
   width: 100%;
   border-radius: 10px;
   padding-top: 40px;
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course .info h2 {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course .info h2 {
   text-decoration: none;
   text-transform: capitalize;
   font-size: 14px;
@@ -629,7 +887,7 @@
   -webkit-box-orient: vertical;
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course .info .description {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course .info .description {
   width: 100%;
   font-size: 12px;
   letter-spacing: 0.5px;
@@ -642,7 +900,7 @@
   -webkit-box-orient: vertical;
 }
 
-.app-container .app .page .content .all-courses .courses .course-row .course .info .creator {
+.app-container .app-landing .page .content .all-courses .courses .course-row .course .info .creator {
   margin-top: 10px;
   width: 100%;
   font-size: 9px;
@@ -651,147 +909,7 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-.app-container .app .page .content footer {
-  margin-top: 100px;
-  padding: 50px 0;
-  width: 100%;
-  border-top: 1px solid var(--whiteDim);
-}
-
-.app-container .app .page .content footer .resources {
-  margin-top: 30px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.app-container .app .page .content footer .resources h2 {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
-  letter-spacing: 0.5px;
-}
-
-.app-container .app .page .content footer .resources .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 50%;
-  height: 100px;
-  margin: 15px 0;
-  list-style-type: none;
-}
-
-.app-container .app .page .content footer .resources .links li {
-  padding: 5px 0;
-}
-
-.app-container .app .page .content footer .resources .links li a {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
-.app-container .app .page .content footer .resources .links li a:hover {
-  color: var(--muddyBlue);
-}
-
-.app-container .app .page .content footer .line {
-  width: 100%;
-  height: 1px;
-  background: var(--whiteDim);
-  margin: 30px 0;
-}
-
-.app-container .app .page .content footer .copy {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px;
-}
-
-.app-container .app .page .content footer .copy p {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12px;
-  letter-spacing: 0.5px;
-}
-
-.app-container .app .page .content footer .copy img {
-  opacity: 0.5;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-  cursor: pointer;
-}
-
-.app-container .app .page .content footer .copy img:hover {
-  opacity: 1;
-}
-
-.app-container .app .page .content footer .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
-.app-container .app .page .content footer .header .socials {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-}
-
-.app-container .app .page .content footer .header .socials li button {
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  outline: 0;
-  background-color: transparent;
-  margin-right: 40px;
-  color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: 0.1s ease-out;
-  transition: 0.1s ease-out;
-}
-
-.app-container .app .page .content footer .header .socials li button:hover {
-  color: var(--whiteOne);
-}
-
-.app-container .app .page .content footer .header .backToTop {
-  cursor: pointer;
-  border-radius: 5px;
-  outline: 0;
-  border: 1px solid var(--whiteDim);
-  background-color: transparent;
-  height: 40px;
-  width: 40px;
-  color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
-}
-
-.app-container .app .page .content footer .header .backToTop:hover {
-  color: var(--whiteOne);
+#coursePage {
+  display: none;
 }
 /*# sourceMappingURL=landing.css.map */
