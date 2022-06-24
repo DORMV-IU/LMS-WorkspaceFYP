@@ -9,22 +9,39 @@ const signOutBtn = document.querySelector("#signOutBtn");
 const learnMore = document.querySelector("#lm");
 
 const userCoursesBtn = document.querySelector("#userCoursesBtn");
+const homeBtn = document.querySelector("#homeBtn");
+const createCourses = document.querySelector("#createCourses");
+
+let pageHistory;
+
+//PAGE CHANGE LISTENERS
 userCoursesBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("clicked");
-  userCoursesBtn.classList.add(".active");
-  changePage("homePage", "coursePage", "extra");
+  userCoursesBtn.classList.add("active");
+  homeBtn.classList.remove("active");
+  createCourses.classList.remove("active");
+  changePage("#homePage", "#userCourses", ".extra");
 });
 
-const ftPosition = content.offsetTop;
+homeBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  userCoursesBtn.classList.remove("active");
+  homeBtn.classList.add("active");
+  createCourses.classList.remove("active");
+  changePage("#userCourses", "#homePage", ".extra");
+});
+
+const ftPosition = content[0].offsetTop;
 const acPosition = allCourses.offsetTop;
 
 // CHANGE PAGES
 function changePage(previous, present, extra) {
-  document.querySelector(`#${previous}`).style.display = "none";
-  document.querySelector(`#${present}`).style.display = "block";
+  pageHistory = previous; //Track Previously Displayed Page
+  console.log(pageHistory);
+  document.querySelector(`${previous}`).style.display = "none";
+  document.querySelector(`${present}`).style.display = "block";
   if (extra !== "") {
-    document.querySelectorAll(`.${extra}`).forEach((ex) => {
+    document.querySelectorAll(`${extra}`).forEach((ex) => {
       ex.style.display = "none";
     });
   }
@@ -33,7 +50,7 @@ function changePage(previous, present, extra) {
 
 ftBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  content.scrollTo({
+  content[0].scrollTo({
     top: 0,
     behavior: "smooth",
   });
@@ -46,7 +63,7 @@ ftBtn.addEventListener("click", (e) => {
 
 learnMore.addEventListener("click", (e) => {
   e.preventDefault();
-  content.scrollTo({
+  content[0].scrollTo({
     top: 400,
     behavior: "smooth",
   });
@@ -59,7 +76,7 @@ learnMore.addEventListener("click", (e) => {
 
 acBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  content.scrollTo({
+  content[0].scrollTo({
     top: 400,
     behavior: "smooth",
   });
@@ -72,7 +89,7 @@ acBtn.addEventListener("click", (e) => {
 
 csBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  content.scrollTo({
+  content[0].scrollTo({
     top: comingSoon.offsetTop - 100,
     behavior: "smooth",
   });

@@ -186,6 +186,7 @@
 }
 
 .page nav .right .userImage {
+  overflow: hidden;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -199,17 +200,24 @@
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 1px solid var(--whiteDim);
+  border: 2px solid var(--whiteDim);
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
 
+.page nav .right .userImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .page nav .right .userImage:hover {
-  border: 1px solid var(--whiteOne);
+  border: 2px solid var(--whiteOne);
 }
 
 .page nav .right .userImage.active {
-  border: 1px solid var(--whiteOne);
+  border: 2px solid var(--whiteOne);
 }
 
 .page nav .right .vertical_line {
