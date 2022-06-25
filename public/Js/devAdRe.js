@@ -1,5 +1,4 @@
 "use strict";
-
 // PASSWORD VALIDITY CHECK
 const password = document.getElementById("pwd"),
   confirm_password = document.getElementById("conpwd"),
