@@ -1,3 +1,5 @@
+//SCRIPT IS NOT DEFERRED AND WILL RUN IMMEDIATELY
+
 function screen(x) {
   if (x.matches) {
     // If media query matches
@@ -11,6 +13,8 @@ function screen(x) {
   }
 }
 
-var x = window.matchMedia("(max-width: 1000px)");
+const x = window.matchMedia("(max-width: 1000px)");
 x.addListener(screen);
-screen(x); // Call listener function at run time
+window.addEventListener("load", () => {
+  screen(x);
+});

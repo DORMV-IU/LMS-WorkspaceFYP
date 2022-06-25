@@ -7,14 +7,8 @@
     <title>Login | Student Information System</title>
 
     <style>
-      @media screen and (max-width: 600px) {
-        .loginWrapper {
-          display: none;
-        }
-
-        .notDesktopMode {
-          display: block;
-        }
+      .notDesktopMode {
+        display: none;
       }
     </style>
 
@@ -62,9 +56,10 @@
 
     <!-- SCRIPTS -->
     <script src="./Js/auth.prerequisites.js" defer></script>
-    <script src="./Js/auth.users.js" defer></script>
+    <script src="./Js/auth.user-login.js" defer></script>
     <script src="./Js/portal.js" defer></script>
-    <script src="./Js/universal.js" defer></script>
+    <script src="./Js/auth.state-management.login.js" defer></script>
+
     <script
       src="https://kit.fontawesome.com/d72d59cfcd.js"
       crossorigin="anonymous"
@@ -82,10 +77,10 @@
         <p>Student Information System (SIS)</p>
 
         <form>
-          <input type="text" name="id" placeholder="Enter your ID" />
+          <input type="email" name="id" placeholder="Enter your Email" />
           <input type="password" name="pwd" placeholder="Enter Password" />
           <div class="authRow">
-            <button id="loginBtn">Login</button>
+            <button type="submit" id="loginBtn">Login</button>
             <a href="./HTML/featureUnavailable.html">Forgot? Reset Password</a>
           </div>
         </form>
@@ -104,10 +99,10 @@
         <p>Personnel Management System (PMS)</p>
 
         <form>
-          <input type="text" name="id" placeholder="Enter your ID" />
+          <input type="email" name="id" placeholder="Enter your Email" />
           <input type="password" name="pwd" placeholder="Enter Password" />
           <div class="authRow">
-            <button id="loginBtn">Login</button>
+            <button type="submit" id="loginBtn">Login</button>
             <!--TODO-->
             <a href="./HTML/featureUnavailable.html">Forgot? Reset Password</a>
           </div>
@@ -204,7 +199,7 @@
           <button
             class="lmsBtn"
             title="Learning Management System"
-            onclick="window.location.href='./HTML/featureUnavailable.html'"
+            onclick="window.location.href='./lms/landing.html'"
           >
             <!--TODO-->
             <i class="fa-solid fa-graduation-cap"></i>
@@ -231,5 +226,6 @@
     <div class="notDesktopMode">
       <h3>Please use the Desktop Version of the Platform</h3>
     </div>
+    <script src="./Js/universal.js"></script>
   </body>
 </html>

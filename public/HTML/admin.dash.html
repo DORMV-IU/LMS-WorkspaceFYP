@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUN Admin Portal</title>
+
+    <!-- FIREBASE -->
+    <script defer src="/__/firebase/9.8.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.8.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.8.2/firebase-database-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/9.8.2/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-performance-compat.js"
+    ></script>
+
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../Styles/portalAuth.css" />
+    <link rel="icon" type="image/x-icon"  href="../Images/fav/LMS.svg" sizes="20x20">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../Styles/portalDash.css" />
+
+    <!-- SCRIPTS -->
+    <script src="../Js/auth.prerequisites.js" defer></script>
+    <script src="../Js/auth.state-management.logout.js" defer></script>
+    <script src="../Js/app.dash.js" defer></script>
+
+    <script
+      src="https://kit.fontawesome.com/d72d59cfcd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="main">
+      <div class="logo">
+        <img src="../Images/logo.png" alt="logo" />
+
+        <label for="check">
+          <i class="fas fa-bars" id="btn"></i>
+          <i class="fas fa-times" id="cancel"></i>
+        </label>
+        </div>
+        <div class="displayImage">
+          <h3 >Welcome, <span class="username" span style = "font-weight: bold; color: #ffcb2b;">{username}</span></h3>
+          <img class="userImage" src="../Images/default2.png" alt="userImage" />
+        </div>
+      </header>
+      <input type="checkbox" id="check" />
+      <div class="sidebar">
+        <header>
+          <div class="txt">
+            <i style="color: rgba(27, 28, 30, 0.75);" class="fa-solid fa-user-secret"></i>
+            <p title="Administrator"><span class="firstName">First Name</span><br><span class="lastName" style = "color: #ffcb2b; font-weight: bold; ">Last Name</span></p>
+        </div>
+      </header>
+      <a href="#" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="../lms/landing.html">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <span>L. M. S.</span>
+      </a>
+      </a>
+      <a id="logOut">
+        <i class="fa-solid fa-power-off"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+    <!-- <script src="../Js/universal.js" ></script> -->
+
+  </body>
+</html>

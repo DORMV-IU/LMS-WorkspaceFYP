@@ -1,0 +1,518 @@
+@import url("./universal.lms.css");
+.page {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page nav {
+  height: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 50px;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.page nav .left {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page nav .left li {
+  list-style-type: none;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page nav .left li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  margin-right: 30px;
+  letter-spacing: 00.5px;
+  cursor: pointer;
+}
+
+.page nav .left li a img {
+  height: 30px;
+  opacity: 0.75;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.page nav .left li a img:hover {
+  opacity: 1;
+}
+
+.page nav .left li a i {
+  margin-right: 5px;
+}
+
+.page nav .left li a.active {
+  color: var(--whiteOne);
+}
+
+.page nav .left li a:hover {
+  color: var(--whiteOne);
+}
+
+.page nav .right {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page nav .right .userInfo {
+  position: absolute;
+  z-index: 1000;
+  width: 350px;
+  top: 85px;
+  right: 50px;
+  border-radius: 8px;
+  background-color: #202020;
+  -webkit-box-shadow: var(--softShadows);
+          box-shadow: var(--softShadows);
+  padding: 30px 25px;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  display: none;
+}
+
+.page nav .right .userInfo .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page nav .right .userInfo .header h2 {
+  color: var(--whiteOne);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.page nav .right .userInfo .header .closeBtn {
+  color: var(--whiteOne);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.page nav .right .userInfo .header .closeBtn:hover {
+  color: var(--whiteOne);
+}
+
+.page nav .right .userInfo .line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+.page nav .right .userInfo ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page nav .right .userInfo ul li {
+  width: 100%;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page nav .right .userInfo ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.page nav .right .userInfo ul li a:hover {
+  color: var(--whiteOne);
+}
+
+.page nav .right .modal_background {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.page nav .right .userImage {
+  overflow: hidden;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--whiteDim);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.page nav .right .userImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page nav .right .userImage:hover {
+  border: 2px solid var(--whiteOne);
+}
+
+.page nav .right .userImage.active {
+  border: 2px solid var(--whiteOne);
+}
+
+.page nav .right .vertical_line {
+  height: 30px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 25px;
+}
+
+.page nav .right .notify {
+  margin-right: 25px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.page nav .right .notify:hover {
+  color: var(--whiteOne);
+}
+
+.page nav .right .notify.active {
+  color: var(--whiteOne);
+}
+
+.page nav .right .notifications {
+  position: absolute;
+  z-index: 1000;
+  width: 350px;
+  top: 85px;
+  right: 200px;
+  border-radius: 8px;
+  background-color: #202020;
+  -webkit-box-shadow: var(--softShadows);
+          box-shadow: var(--softShadows);
+  padding: 30px 25px;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  display: none;
+}
+
+.page nav .right .notifications .line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+.page nav .right .notifications .no_notif {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.page nav .right .notifications .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page nav .right .notifications .header h2 {
+  color: var(--whiteOne);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.page nav .right .notifications .header .closeBtn {
+  color: var(--whiteOne);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.page nav .right .notifications .header .closeBtn:hover {
+  color: var(--whiteOne);
+}
+
+.page nav .right form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page nav .right form input {
+  text-align: right;
+  outline: none;
+  height: 30px;
+  width: 175px;
+  border-radius: 40px 0 0 40px;
+  background-color: var(--whiteDim);
+  letter-spacing: 1px;
+  padding: 20px 10px 20px 20px;
+  border: none;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Poppins", sans-serif;
+}
+
+.page nav .right form button {
+  padding: 20px 20px 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 0 40px 40px 0;
+  background-color: var(--whiteDim);
+  border: none;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.page .content {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  padding: 0 50px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.page .content .banner {
+  position: relative;
+  width: 100%;
+  height: 375px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background: url("../Images/Banners/nordwood-themes-kRNZiGKtz48-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 75px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page .content .banner .welcome {
+  position: absolute;
+  bottom: 50px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.page .content .banner .welcome h3 {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.page .content .banner .welcome img {
+  width: 100px;
+  height: 100px;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page .content .banner .welcome p {
+  margin: 15px 0;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.page .content .banner .welcome p span {
+  font-size: 12px;
+}
+
+.page .content .banner .welcome button {
+  margin-top: 15px;
+  width: 100px;
+  height: 40px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  background: transparent;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.page .content .banner .welcome button i {
+  -webkit-animation: float 0.5s alternate ease-in-out infinite;
+          animation: float 0.5s alternate ease-in-out infinite;
+}
+
+.page .content .details {
+  width: 100%;
+  height: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.page .content .details header {
+  padding: 25px 0 50px 0;
+  width: 100%;
+  border-bottom: 1px solid var(--whiteDim);
+  letter-spacing: 0.5px;
+}
+
+.page .content .details header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.page .content .details header h5 {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.page .content .details header h5 a {
+  color: var(--whiteOne);
+  text-decoration: underline;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.page .content .details header h5 a:hover {
+  color: var(--muddyBlue);
+}
+
+.page .content .details .line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--whiteDim);
+}
+
+.page .content .details .section {
+  padding: 50px 0;
+  width: 100%;
+}
+
+.page .content .details .section h2 {
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.page .content .details .section p {
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid var(--whiteDim);
+  border-radius: 3px;
+}
+
+.page .content .details .section p .upperCase {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=basicPage.css.map */
