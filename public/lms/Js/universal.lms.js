@@ -61,3 +61,5 @@ backToTop.forEach((top, i) => {
 });
 
 document.addEventListener("DOMContentLoaded", screenWatcher);
+
+console.log(sessionStorage.user);

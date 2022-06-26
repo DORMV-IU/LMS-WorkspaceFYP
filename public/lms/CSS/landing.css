@@ -1043,6 +1043,304 @@
           animation: float 0.5s alternate ease-in-out infinite;
 }
 
+.courseContentContainer .enrolled {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+
+.courseContentContainer .enrolled .left-side {
+  width: calc(2 * (100% / 3));
+  height: 100%;
+  padding: 25px;
+  padding-left: 0;
+}
+
+.courseContentContainer .enrolled .left-side .box {
+  width: 100%;
+  border: 1px solid var(--whiteDim);
+  padding: 40px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+.courseContentContainer .enrolled .left-side .box h2 {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+  width: 100%;
+  border-bottom: 1px solid var(--whiteDim);
+  margin-bottom: 20px;
+}
+
+.courseContentContainer .enrolled .left-side .box h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding-bottom: 20px;
+  width: 100%;
+  border-bottom: 1px solid var(--whiteDim);
+  margin-bottom: 20px;
+}
+
+.courseContentContainer .enrolled .left-side .box video {
+  width: 100%;
+  height: 300px;
+  border-radius: 7px;
+}
+
+.courseContentContainer .enrolled .left-side .box video[poster] {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.courseContentContainer .enrolled .left-side .box ul {
+  width: 100%;
+  padding-left: 17px;
+}
+
+.courseContentContainer .enrolled .left-side .box ul li {
+  width: 75%;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+  list-style-type: circle;
+}
+
+.courseContentContainer .enrolled .left-side .box .course-description {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+}
+
+.courseContentContainer .enrolled .left-side .instructor {
+  margin-top: 50px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.courseContentContainer .enrolled .left-side .instructor .info {
+  width: 50%;
+}
+
+.courseContentContainer .enrolled .left-side .instructor .authorNotes {
+  width: 50%;
+  border: 1px solid var(--whiteDim);
+  padding: 20px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+  font-size: 11px;
+  border-radius: 5px;
+  height: 250px;
+  font-style: italic;
+  overflow: hidden;
+}
+
+.courseContentContainer .enrolled .left-side .instructor .authorNotes p {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.courseContentContainer .enrolled .left-side .instructor .createdBy {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+  margin: 20px 0;
+  letter-spacing: 1px;
+}
+
+.courseContentContainer .enrolled .left-side .instructor .author {
+  font-family: "Poppins", sans-serif;
+  margin: 5px 0;
+}
+
+.courseContentContainer .enrolled .left-side .instructor .accolades {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.courseContentContainer .enrolled .left-side .instructor .authorImg {
+  margin-top: 20px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.courseContentContainer .enrolled .left-side .report {
+  text-decoration: line-through;
+  margin-top: 50px;
+  cursor: pointer;
+  padding: 14px 25px;
+  color: #a10000;
+  border: 1px dashed var(--whiteDim);
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  outline: 0;
+  text-transform: uppercase;
+  background-color: transparent;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.courseContentContainer .enrolled .left-side .report i {
+  margin-right: 5px;
+}
+
+.courseContentContainer .enrolled .left-side .report:hover {
+  background-color: #a10000;
+  color: var(--blackOne);
+}
+
+.courseContentContainer .enrolled .right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(100% / 3);
+  padding: 25px;
+  height: auto;
+  padding-right: 0;
+}
+
+.courseContentContainer .enrolled .right-side .course-content-list {
+  width: 100%;
+  border: 1px solid var(--whiteDim);
+  padding: 40px;
+  font-size: 14px;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+.courseContentContainer .enrolled .right-side .course-content-list h3 {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  padding-bottom: 20px;
+  width: 100%;
+  border-bottom: 1px solid var(--whiteDim);
+  margin-bottom: 20px;
+}
+
+.courseContentContainer .enrolled .right-side .course-content-list .content-set {
+  width: 100%;
+  height: 300px;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.courseContentContainer .enrolled .right-side .course-content-list .content-set .content-button {
+  cursor: pointer;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin: 3px 0;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid transparent;
+  padding: 15px 10px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.courseContentContainer .enrolled .right-side .course-content-list .content-set .content-button:hover {
+  background-color: var(--whiteDim);
+}
+
+.courseContentContainer .enrolled .right-side .course-content-list .content-set .content-button.active {
+  background-color: var(--whiteDim);
+}
+
+.courseContentContainer .enrolled .right-side .course-content-list .content-set .content-button .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25px;
+  height: 100%;
+}
+
+.courseContentContainer .enrolled .right-side .course-content-list .content-set .content-button .icon input[type="checkbox"] {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+.courseContentContainer .enrolled .right-side .course-content-list .content-set .content-button p {
+  width: 100%;
+  height: 100%;
+}
+
+.courseContentContainer .enrolled .right-side .button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  outline: 0;
+  text-transform: capitalize;
+  background-color: var(--whiteDim);
+  border: 0;
+  color: var(--blackOne);
+  padding: 15px;
+}
+
+.courseContentContainer .enrolled .right-side .button i {
+  margin-right: 5px;
+}
+
 .courseContentContainer .notEnrolled {
   position: relative;
   width: 100%;
@@ -1050,12 +1348,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "Poppins", sans-serif;
+  display: none;
 }
 
 .courseContentContainer .notEnrolled .left-side {
   width: calc(2 * (100% / 3));
   height: 100%;
   padding: 25px;
+  padding-left: 0;
 }
 
 .courseContentContainer .notEnrolled .left-side .box {
@@ -1107,7 +1408,7 @@
           flex-direction: column;
 }
 
-.courseContentContainer .notEnrolled .left-side .box .objective {
+.courseContentContainer .notEnrolled .left-side .box .obj-set .objective {
   width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1125,7 +1426,7 @@
   margin: 10px 0;
 }
 
-.courseContentContainer .notEnrolled .left-side .box .objective span {
+.courseContentContainer .notEnrolled .left-side .box .obj-set .objective span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1139,7 +1440,7 @@
   height: 100%;
 }
 
-.courseContentContainer .notEnrolled .left-side .box .objective p {
+.courseContentContainer .notEnrolled .left-side .box .obj-set .objective p {
   width: 100%;
   height: 100%;
 }
@@ -1243,10 +1544,73 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 200px;
   width: calc(100% / 3);
-  border-left: 1px dashed var(--whiteDim);
   padding: 25px;
+  padding-right: 0;
+}
+
+.courseContentContainer .notEnrolled .right-side .includes {
+  width: 100%;
+  border: 1px solid var(--whiteDim);
+  padding: 40px;
+  font-size: 14px;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+.courseContentContainer .notEnrolled .right-side .includes h3 {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  padding-bottom: 20px;
+  width: 100%;
+  border-bottom: 1px solid var(--whiteDim);
+  margin-bottom: 20px;
+}
+
+.courseContentContainer .notEnrolled .right-side .includes .include-set {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.courseContentContainer .notEnrolled .right-side .includes .include-set .include-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.courseContentContainer .notEnrolled .right-side .includes .include-set .include-item .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25px;
+  height: 100%;
+}
+
+.courseContentContainer .notEnrolled .right-side .includes .include-set .include-item p {
+  width: 100%;
+  height: 100%;
 }
 
 .courseContentContainer .notEnrolled .right-side button {
@@ -1264,7 +1628,7 @@
   width: 100%;
   margin-bottom: 20px;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 14px;
   letter-spacing: 1px;
   font-family: "Poppins", sans-serif;
@@ -1283,14 +1647,14 @@
 }
 
 .courseContentContainer .notEnrolled .right-side button.enroll-enabled i {
-  font-size: 20px;
+  padding-right: 90px;
+  font-size: 12px;
   opacity: 0;
-  margin-right: -5px;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   position: absolute;
-  -webkit-animation: float 0.5s alternate ease-in-out infinite;
-          animation: float 0.5s alternate ease-in-out infinite;
+  -webkit-animation: L-R 0.5s alternate ease-in-out infinite;
+          animation: L-R 0.5s alternate ease-in-out infinite;
 }
 
 .courseContentContainer .notEnrolled .right-side button.enroll-enabled:hover {
@@ -1299,17 +1663,7 @@
 }
 
 .courseContentContainer .notEnrolled .right-side button.enroll-enabled:hover i {
-  padding-right: 90px;
   opacity: 1;
-}
-
-.courseContentContainer .notEnrolled .right-side button.enroll-disabled {
-  background-color: var(--whiteDim);
-  color: var(--blackOne);
-}
-
-.courseContentContainer .notEnrolled .right-side button.enroll-disabled i {
-  margin-right: 5px;
 }
 
 #homePage,
