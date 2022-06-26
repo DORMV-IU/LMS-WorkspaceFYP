@@ -12,6 +12,8 @@ const userCoursesBtn = document.querySelector("#userCoursesBtn");
 const homeBtn = document.querySelector("#homeBtn");
 const createCourses = document.querySelector("#createCourses");
 
+const courseThumbnail = document.querySelectorAll(".overlay");
+
 let pageHistory;
 
 //PAGE CHANGE LISTENERS
@@ -29,6 +31,16 @@ homeBtn.addEventListener("click", (e) => {
   homeBtn.classList.add("active");
   createCourses.classList.remove("active");
   changePage("#userCourses", "#homePage", ".extra");
+});
+
+courseThumbnail.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    userCoursesBtn.classList.remove("active");
+    homeBtn.classList.remove("active");
+    createCourses.classList.remove("active");
+    changePage("#homePage", "#coursePage", "");
+  });
 });
 
 const ftPosition = content[0].offsetTop;
