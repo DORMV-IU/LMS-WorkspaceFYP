@@ -44,6 +44,7 @@
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="../CSS/basicPage.css" />
     <link rel="stylesheet" href="../CSS/footer.css" />
+    <link rel="stylesheet" href="../CSS/universal.lms.css" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -158,96 +159,117 @@
 
       <!-- Main content Here -->
       <div class="content content-scroll">
-        <div class="content">
-            <h1>Semester Courses</h1>
-        </br>
-        <div class="sort-course">
-            <form action="">
-                <label for="sort">Categories: </label>
-                    <select name="sort type" id="sort">
-                        <option value="rigatoni">Engineering</option>
-                        <option value="dave">U-Electives</option>
-                        <option value="dave">Arts & Science</option>
-                    </select>
+        <table class="table-div" cellspacing="0" align="center">
+            <tr style="background-color:grey;">
+                <th style="border-radius: 25px 0px 0px 0px;" align="center" height="50"
+                    width="100">
+                    <i class="fa-solid fa-clock"></i></br>
+                </th>
+                <th align="center" height="50"
+                    width="100">
+                    <b>9:30-10:20</b>
+                </th>
+                <th align="center" height="50"
+                    width="100">
+                    <b>10:20-11:10</b>
+                </th>
+                <th align="center" height="50"
+                    width="100">
+                    <b>11:10-12:00</b>
+                </th>
+                <th align="center" height="50"
+                    width="100">
+                    <b>12:00-12:40</b>
+                </th>
+                <th align="center" height="50"
+                    width="100">
+                    <b>12:40-1:30</b>
+                </th>
+                <th align="center" height="50"
+                    width="100">
+                    <b>1:30-2:20</b>
+                </th>
+                <th align="center" height="50"
+                    width="100">
+                    <b>2:20-3:10</b>
+                </th>
+                <th style="border-radius: 0px 25px 0px 0px;" align="center" height="50"
+                    width="100">
+                    <b>3:10-4:00</b>
+                </th>
+            </tr>
+            <tr>
+                <td class="days" align="center" height="50">
+                    <b>Monday</b></td>
+                <td class="actve" align="center" height="50">Eng101</td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
 
-                <label for="sort">Sort: </label>
-                    <select name="sort type" id="sort">
-                        <option value="rigatoni">Sort A-Z</option>
-                        <option value="dave">Sort Z-A</option>
-                    </select>
-                <label for="sort">Courses: </label>
-                <input id="Search" type="text" placeholder="Search.."/>
-              </form>  
-        </div> 
-        <!-- Course List -->
-        <div class="course-list">
-            <!-- Course card -->
-            <div class="card">
-                <div class="cs-image">
-                    <img height="290px" width="290px" src="../Images/sq-bg-1.jpg" alt="">
-                </div>
-                <div class="cs-desc">
-                    <h1>CMPE242-ALL_2021-222 Operating Systems</h1>
-                    <br/>
-                    <h2>Course Name: Computer Engineering</h2>
-                    <h2>Course Professor: Michael Jordan</h2><br/>
-                    <h2>Completion:</h2>
-                    <div class="progress">
-                        <div class="skill one">80%</div>
-                    </div>
-                    <button class="btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cs-image">
-                    <img height="290px" width="290px" src="../Images/sq-bg-2.jpg" alt="">
-                </div>
-                <div class="cs-desc">
-                    <h1>CMSE100-01_2021-222 </h1>
-                    <br/>
-                    <h2>Course Name: Introduction to Software Engineering</h2>
-                    <h2>Course Professor: Michael Jordan</h2><br/>
-                    <h2>Completion:</h2>
-                    <div class="progress">
-                        <div class="skill two">63%</div>
-                    </div>
-                    <button class="btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cs-image">
-                    <img height="290px" width="290px" src="../Images/sq-bg-3.jpg" alt="">
-                </div>
-                <div class="cs-desc">
-                    <h1>CMSE222-01_2021-222</h1>
-                    <br/>
-                    <h2>Course Name: Introduction to Computer Organization</h2>
-                    <h2>Course Professor: Michael Jordan</h2><br/>
-                    <h2>Completion:</h2>
-                    <div class="progress">
-                        <div class="skill three">45%</div>
-                    </div>
-                    <button class="btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cs-image">
-                    <img height="290px" width="290px" src="../Images/sq-bg-4.jpg" alt="">
-                </div>
-                <div class="cs-desc">
-                    <h1>MATH241-ALL_2021-222 </h1>
-                    <br/>
-                    <h2>Course Name: Linear Algebra and Ordinary Differential Equations</h2>
-                    <h2>Course Professor: Michael Jordan</h2><br/>
-                    <h2>Completion:</h2>
-                    <div class="progress">
-                        <div class="skill four">15%</div>
-                    </div>
-                    <button class="btn"><i class="fa-solid fa-play"></i></button>
-                </div>
-            </div>
-        </div> 
-        </div>
+                <td colspan="3" align="center"
+                    height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td class="days" align="center" height="50">
+                    <b>Tuesday</b>
+                </td>
+                <td colspan="3" align="center"
+                    height="50">
+                </td>
+                <td class="actve"align="center" height="50">ENG101</td>
+                <td align="center" height="50"></td>
+                <td class="actve"align="center" height="50">MATH241</td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td class="days" align="center" height="50">
+                    <b>Wednesday</b>
+                </td>
+                <td class="actve"align="center" height="50">MATH241</td>
+                <td align="center" height="50"></td>
+                <td class="actve"align="center" height="50">ENG101</td>
+                <td class="actve"align="center" height="50">CHEM321</td>
+                <td colspan="3" align="center"
+                    height="50">
+                </td>
+            </tr>
+            <tr>
+                <td class="days" align="center" height="50">
+                    <b>Thursday</b>
+                </td>
+                <td class="actve"align="center" height="50">PHY124</td>
+                <td class="actve"align="center" height="50">ENG101</td>
+                <td align="center" height="50"></td>
+                <td colspan="3" align="center"
+                    height="50">
+                </td>
+                <td class="actve"align="center" height="50">MATH241</td>
+            </tr>
+            <tr>
+                <td class="days" align="center" height="50">
+                    <b>Friday</b>
+                </td>
+                <td colspan="3" align="center"
+                    height="50">
+                </td>
+                <td class="actve"align="center" height="50">MATH241</td>
+                <td align="center" height="50"></td>
+                <td class="actve"align="center" height="50">ENG101</td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td style="border-radius: 0px 0px 0px 25px;" class="days" align="center" height="50">
+                    <b>Saturday</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td class="actve"align="center" height="50">CHEM321</td>
+                <td class="actve" align="center" height="50">MATH241</td>
+                <td colspan="3" align="center"
+                    height="50">
+                </td>
+                <td align="center" height="50"></td>
+            </tr>
+        </table>
         <!-- !!SEPERATION!! -->
         <footer>
           <div class="header">
