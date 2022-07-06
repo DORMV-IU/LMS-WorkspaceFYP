@@ -342,7 +342,7 @@
         border-radius: 10px;
 
         h3 {
-          color: rgba(0, 0, 0, 0.75);
+          color: var(--blackDim);
           font-size: 25px;
           letter-spacing: 0.5px;
           font-family: "Poppins", sans-serif;
@@ -358,13 +358,17 @@
 
         p {
           margin: 15px 0;
-          color: rgba(0, 0, 0, 0.75);
+          color: var(--blackDim);
           font-size: 14px;
           letter-spacing: 0.5px;
           font-family: "Poppins", sans-serif;
 
           span {
             font-size: 12px;
+          }
+
+          .userWelcomeFirstName {
+            font-size: 14px;
           }
         }
 

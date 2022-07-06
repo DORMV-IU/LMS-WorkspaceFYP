@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses | Mobile Development | NUN Applications</title>
+
+    <!-- FIREBASE -->
+    <script defer src="/__/firebase/9.8.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.8.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.8.2/firebase-database-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/9.8.2/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-performance-compat.js"
+    ></script>
+
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <script src="../Js/auth.js" defer></script>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../CSS/courses.lms.css" />
+    <link rel="stylesheet" href="../CSS/footer.css" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../Images/Logos/Fav1alt.svg"
+      sizes="20x20"
+    />
+
+    <!-- SCRIPTS -->
+    <script
+      src="https://kit.fontawesome.com/d72d59cfcd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- !!SEPERATION!! -->
+  <body>
+    <!-- APPLICATION !!SEPERATION!! -->
+
+    <div class="app-container desktopMode">
+      <div class="app-landing">
+        <div class="sidebar" title="sidebar">
+          <header>
+            <img src="../Images/Logos/LMS_LG1.svg" alt="LMS Logo" />
+            <!-- <p>learning Management <br />system</p> -->
+          </header>
+          <div class="menu-items">
+            <ul>
+              <li>
+                <a id="homeBtn" href="./landing.html"
+                  ><span
+                    ><i class="fa-solid fa-house-chimney"></i> Home</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="./user-courses.html"
+                  ><span
+                    ><i class="fa-solid fa-lines-leaning"></i> My Courses</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  id="courseManagementBtn"
+                  style="display: none"
+                  href="./course-management.html"
+                  ><span
+                    ><i class="fa-solid fa-pen"></i> Manage Courses</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="acc-sys-items">
+            <p>
+              learning <br />management <br />system <br /><i
+                class="fa-solid fa-angles-down"
+              ></i>
+            </p>
+          </div>
+        </div>
+
+        <!-- COURSE DESCRIPTION PAGE !!SEPERATION!! -->
+        <div class="page" id="coursePage">
+          <nav>
+            <!-- LEFT SIDE OF NAV -->
+            <ul class="left">
+              <li>
+                <a href="./landing.html"
+                  ><img src="../Images/Logos/LMS_LG1.svg"
+                /></a>
+              </li>
+              <li>
+                <a onclick="history.back()"
+                  ><i class="fa-solid fa-angle-left"></i> Back</a
+                >
+              </li>
+            </ul>
+
+            <!-- RIGHT SIDE OF NAV -->
+            <div class="right">
+              <a href="" class="notify modal-open"
+                ><i class="fa-solid fa-bell"></i
+              ></a>
+              <div class="notifications modalBody">
+                <div class="header">
+                  <h2>Notifications</h2>
+                  <span class="closeBtn"
+                    ><i class="fa-solid fa-xmark"></i
+                  ></span>
+                </div>
+                <div class="line"></div>
+                <div class="no_notif">
+                  <p>There aren't any new notifications</p>
+                </div>
+              </div>
+              <div class="modal_background"></div>
+
+              <form action="../HTML/feature-unavailable.html">
+                <input type="text" />
+                <button>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+              <div class="vertical_line"></div>
+
+              <div class="userImage modal-open"></div>
+              <div class="userInfo modalBody">
+                <div class="header">
+                  <h2 class="userFirstName">Wëndigõ</h2>
+                  <span class="closeBtn"
+                    ><i class="fa-solid fa-xmark"></i
+                  ></span>
+                </div>
+                <div class="line"></div>
+                <ul>
+                  <li><a href="../HTML/user-account.html">Account</a></li>
+                  <li>
+                    <a
+                      href="../HTML/feature-unavailable.html"
+                      style="text-decoration: line-through"
+                      >Settings</a
+                    >
+                  </li>
+                </ul>
+                <div class="line"></div>
+                <ul>
+                  <li>
+                    <a
+                      href="https://docs.google.com/document/d/1-UjW_NaIEtf2V6xxVSGgmmlRwVKNC_SlH0oBDTixOXg/edit?usp=sharing"
+                      target="_blank"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../HTML/feature-unavailable.html"
+                      style="text-decoration: line-through"
+                      >Terms of Service</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../HTML/feature-unavailable.html"
+                      style="text-decoration: line-through"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                </ul>
+                <div class="line"></div>
+                <ul>
+                  <li>
+                    <a id="signOutBtn" href="">Sign Out</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="modal_background"></div>
+            </div>
+          </nav>
+
+          <!-- CONTENT !!SEPERATION!!-->
+          <div class="courseContentContainer content-scroll">
+            <div class="banner">
+              <div class="welcome">
+                <!-- <img src="../Images/golden-trooper-2-2560×1440.jpg" alt="" /> -->
+                <p class="categories">
+                  <span class="mainPage">All Courses</span>
+                  <span class="seperator">></span>
+                  <span class="category"> Programming </span>
+                </p>
+                <h3 title="Mobile Game Development with Unity and C#">
+                  Mobile Game Development with Unity and C#
+                </h3>
+                <p class="subTitle">
+                  Aenean sed adipiscing diam donec adipiscing tristique risus
+                  nec. Scelerisque felis imperdiet proin fermentum leo vel orci
+                  porta non.
+                </p>
+                <button id="lm"><i class="fa-solid fa-angles-down"></i></button>
+              </div>
+            </div>
+
+            <!-- IF NOT ENROLLED !!SEPERATION!!-->
+            <div class="notEnrolled">
+              <div class="left-side">
+                <div class="box">
+                  <h2>Learning Objectives</h2>
+
+                  <div class="obj-set">
+                    <div class="objective">
+                      <span><i class="fa-solid fa-check"></i></span>
+                      <p>
+                        Become a modern and confident HTML and CSS developer, no
+                        prior knowledge needed!
+                      </p>
+                    </div>
+                    <!-- <p class="txt">Nothing to display</p> -->
+                  </div>
+                </div>
+
+                <div class="box">
+                  <h2>Requirements</h2>
+                  <!-- <ul>
+                    <li>No coding or design experience necessary</li>
+                    <li>Any computer works — Windows, macOS or Linux</li>
+                    <li>
+                      You don’t need to buy any software — we will use the best
+                      free code editor in the world
+                    </li>
+                  </ul> -->
+                  <p class="txt">Nothing to display</p>
+                </div>
+
+                <div class="box">
+                  <h2>Description</h2>
+                  <p class="course-description">
+                    There is no description for this course
+                  </p>
+                </div>
+                <div class="instructor">
+                  <div class="info">
+                    <p class="createdBy">Created By</p>
+                    <img
+                      src="../Images/michael-dam-mEZ3PoFGs_k-unsplash.jpg"
+                      alt=""
+                      class="authorImg"
+                    />
+                    <h3 class="author">Michelle Darin</h3>
+                    <h4 class="accolades">Ms. C | AWS Certified Expert</h4>
+                    <h5 class="notesTitle"></h5>
+                  </div>
+                  <div class="authorNotes">
+                    <h3>Author Notes</h3>
+                    <p>There are no author notes for this course</p>
+                  </div>
+                </div>
+
+                <button
+                  onclick="window.location.href='../HTML/feature-unavailable.html'"
+                  class="report"
+                >
+                  <i class="fa-solid fa-font-awesome"></i> Report Course Issue
+                </button>
+              </div>
+
+              <div class="right-side">
+                <button class="enroll-enabled">
+                  <i class="fa-solid fa-angles-right"></i> enroll
+                </button>
+
+                <div class="includes">
+                  <h3>What this course includes:</h3>
+                  <div class="include-set">
+                    <div class="include-item">
+                      <span class="icon"><i class="fa-solid fa-play"></i></span>
+                      <p>
+                        <span id="videoNumber">0</span> Streamable Video
+                        Lectures
+                      </p>
+                    </div>
+                    <div class="include-item">
+                      <span class="icon"
+                        ><i class="fa-solid fa-file-arrow-down"></i
+                      ></span>
+                      <p>
+                        <span id="documentNumber">0</span> Downloadable Article
+                        Documents
+                      </p>
+                    </div>
+                    <div class="include-item">
+                      <span class="icon"
+                        ><i class="fa-solid fa-file-pen"></i
+                      ></span>
+                      <p><span id="assignmentNumber">0</span> Assigments</p>
+                    </div>
+                    <div class="include-item">
+                      <span class="icon"
+                        ><i class="fa-solid fa-vial-circle-check"></i
+                      ></span>
+                      <p><span id="quizNumber">0</span> Aseessment Quiz(es)</p>
+                    </div>
+                    <div class="include-item">
+                      <span class="icon"
+                        ><i class="fa-solid fa-graduation-cap"></i
+                      ></span>
+                      <p>Certificate of Completion</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- IF ENROLLED !!SEPERATION!!-->
+            <div class="enrolled">
+              <div class="left-side">
+                <div class="box">
+                  <h3 id="lectureTitle">
+                    <span class="titleNumber">#1:</span> Nothing To Display
+                  </h3>
+                  <video
+                    poster="../Images/Default_Thumbnails/pexels-anna-nekrashevich-6801648.jpg"
+                    controls
+                    controlsList="nodownload"
+                  >
+                    <source src="" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  <br /><br /><br />
+                  <h3 id="lectureDescription">Lecture Description</h3>
+                  <p class="txt">No Description for this lecture</p>
+
+                  <br /><br /><br />
+                  <h3 id="Files">Resources</h3>
+                  <div class="resource-boxes">
+                    <div class="resource-item">
+                      <a href="">
+                        <p>File-Name-dfgs.pdf</p>
+                        <i class="fa-solid fa-angles-down"></i>
+                      </a>
+                    </div>
+                    <div class="resource-item">
+                      <a href="">
+                        <p>File-Name-II.docs</p>
+                        <i class="fa-solid fa-angles-down"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- <p class="txt">No Resources for this lecture</p> -->
+                </div>
+
+                <div class="box">
+                  <h2>Description</h2>
+                  <p class="course-description">
+                    There is no description for this course
+                  </p>
+                </div>
+
+                <div class="instructor">
+                  <div class="info">
+                    <p class="createdBy">Created By</p>
+                    <img
+                      src="../Images/michael-dam-mEZ3PoFGs_k-unsplash.jpg"
+                      alt=""
+                      class="authorImg"
+                    />
+                    <h3 class="author">Michelle Darin</h3>
+                    <h4 class="accolades">Ms. C | AWS Certified Expert</h4>
+                    <h5 class="notesTitle"></h5>
+                  </div>
+                  <div class="authorNotes">
+                    <h3>Author Notes</h3>
+                    <p>There are no author notes for this course</p>
+                  </div>
+                </div>
+
+                <button
+                  onclick="window.location.href='../HTML/feature-unavailable.html'"
+                  class="report"
+                >
+                  <i class="fa-solid fa-font-awesome"></i> Report Course Issue
+                </button>
+              </div>
+
+              <div class="right-side">
+                <button class="button">
+                  <i class="fa-solid fa-check-double"></i> enrolled
+                </button>
+
+                <div class="course-content-list">
+                  <h3>Course Content</h3>
+                  <div class="content-set">
+                    <div class="content-button active">
+                      <span class="icon"><input type="checkbox" /></span>
+                      <p>
+                        <span class="lectureNumber">#1:</span> An High-Level
+                        Overview of JavaScript
+                      </p>
+                    </div>
+                  </div>
+                  <!-- <p>No Lectures To Display</p> -->
+                </div>
+              </div>
+            </div>
+            <!-- !!SEPERATION!! -->
+            <footer>
+              <div class="header">
+                <ul class="socials">
+                  <li>
+                    <button
+                      onclick="window.open('https://web.facebook.com/NileUniversityofNigeria/?_rdc=1&_rdr')"
+                    >
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onclick="window.open('https://www.instagram.com/nileuni/')"
+                    >
+                      <i class="fa-brands fa-instagram"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onclick="window.open('https://twitter.com/NileUni')"
+                    >
+                      <i class="fa-brands fa-twitter"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onclick="window.open('https://www.youtube.com/channel/UC-PeD5lcCgriJ-QHm03j5BA')"
+                    >
+                      <i class="fa-brands fa-youtube"></i>
+                    </button>
+                  </li>
+                </ul>
+                <button class="backToTop">
+                  <i class="fa-solid fa-angles-up"></i>
+                </button>
+              </div>
+
+              <div class="resources">
+                <h2>Resources</h2>
+                <ul class="links">
+                  <li>
+                    <a
+                      style="text-decoration: line-through"
+                      href="../HTML/feature-unavailable.html"
+                      >Terms and Services</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      style="text-decoration: line-through"
+                      href="../HTML/feature-unavailable.html"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      style="text-decoration: line-through"
+                      href="../HTML/feature-unavailable.html"
+                      >Customer Support</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://docs.google.com/document/d/1lpaT0z3yvZw88rzL99vY31iAVvVhJyWD_kDdQ4oBH5w/edit?usp=sharing"
+                      >Usage Documentation</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../../HTML/devAdminRegistration.html"
+                      >Dev Registration</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      style="text-decoration: line-through"
+                      href="../HTML/feature-unavailable.html"
+                      >News</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.nileuniversity.edu.ng/">NUN Home</a>
+                  </li>
+                  <li><a href="../../index.html">NUN Portal</a></li>
+                </ul>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="copy">
+                <p>&copy; 2022, Nile University of Nigeria.</p>
+                <img
+                  onclick="window.location.href='./landing.html'"
+                  src="../Images/Logos/LMS_LG1.svg"
+                  height="30px"
+                />
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <div class="notDesktopMode">
+      <h5>
+        PLEASE GO TO DESKTOP VERSION OF SITE OR RESIZE WINDOW ABOVE 1100PX
+      </h5>
+    </div>
+    <!-- <script src="../Js/auth.lms.js"></script> -->
+    <script>
+      console.log("Course ID: " + sessionStorage.courseID);
+    </script>
+
+    <script src="../Js/app.lms.js"></script>
+
+    <script src="../Js/auth.prerequisites.lms.js" defer></script>
+    <script src="../Js/auth.state-management.logout.lms.js" defer></script>
+    <script src="../Js/universal.lms.js" defer></script>
+    <script src="../Js/main.lms.js" defer></script>
+  </body>
+</html>
+
+<!-- TODO -->
+<!-- 
+  1. Add a new course to the database
+  2. Add a new course to the page
+  3. Add a Width Tracker to ensure the page with does not go lower than the minimum width of the page - 300px
+ -->

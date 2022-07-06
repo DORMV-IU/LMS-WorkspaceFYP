@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Account Information | Learning Management System | NUN Applications
+    </title>
+
+    <!-- FIREBASE -->
+    <script defer src="/__/firebase/9.8.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.8.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.8.2/firebase-database-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/9.8.2/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-performance-compat.js"
+    ></script>
+
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../CSS/basicPage.css" />
+    <link rel="stylesheet" href="../CSS/footer.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../Images/Logos/Fav1alt.svg"
+      sizes="20x20"
+    />
+
+    <!-- SCRIPTS -->
+    <script
+      src="https://kit.fontawesome.com/d72d59cfcd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- !!SEPERATION!! -->
+  <body>
+    <div class="page desktopMode">
+      <nav>
+        <!-- LEFT SIDE OF NAV -->
+        <ul class="left">
+          <li>
+            <a href="./landing.html"
+              ><img src="../Images/Logos/LMS_LG1.svg"
+            /></a>
+          </li>
+          <li>
+            <a onclick="history.back()"
+              ><i class="fa-solid fa-angle-left"></i> Back</a
+            >
+          </li>
+        </ul>
+
+        <!-- RIGHT SIDE OF NAV -->
+        <div class="right">
+          <a href="" class="notify modal-open"
+            ><i class="fa-solid fa-bell"></i
+          ></a>
+          <div class="notifications modalBody">
+            <div class="header">
+              <h2>Notifications</h2>
+              <span class="closeBtn"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+            <div class="line"></div>
+            <div class="no_notif">
+              <p>There aren't any new notifications</p>
+            </div>
+          </div>
+          <div class="modal_background"></div>
+
+          <form action="./HTML/feature-unavailable.html">
+            <input type="text" />
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          <div class="vertical_line"></div>
+
+          <div class="userImage modal-open"></div>
+          <div class="userInfo modalBody">
+            <div class="header">
+              <h2 class="userFirstName">Wëndigõ</h2>
+              <span class="closeBtn"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+            <div class="line"></div>
+            <ul>
+              <li><a href="./user-account.html">Account</a></li>
+              <li>
+                <a
+                  href="./feature-unavailable.html"
+                  style="text-decoration: line-through"
+                  >Settings</a
+                >
+              </li>
+            </ul>
+            <div class="line"></div>
+            <ul>
+              <li>
+                <a
+                  href="https://docs.google.com/document/d/1-UjW_NaIEtf2V6xxVSGgmmlRwVKNC_SlH0oBDTixOXg/edit?usp=sharing"
+                  target="_blank"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./feature-unavailable.html"
+                  style="text-decoration: line-through"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./feature-unavailable.html"
+                  style="text-decoration: line-through"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+            <div class="line"></div>
+            <ul>
+              <li>
+                <a id="signOutBtn" href="">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+          <div class="modal_background"></div>
+        </div>
+      </nav>
+
+      <!-- CONTENT !!SEPERATION!! -->
+
+      <div class="content content-scroll">
+        <div class="banner">
+          <div class="welcome">
+            <img class="welcomeUserImage" src="" alt="" />
+            <p>
+              Welcome, <b><span class="userWelcomeFirstName"></span></b>
+              <br /><span
+                >Below you can find relevant information for your
+                <b>account</b>.</span
+              >
+            </p>
+            <button id="lm"><i class="fa-solid fa-angles-down"></i></button>
+          </div>
+        </div>
+
+        <!-- !!SEPERATION!! -->
+        <div class="details">
+          <header>
+            <h1>General Information</h1>
+            <h5>
+              Review the account details you've shared with the Learning
+              Management System including your name, contact info and more. If
+              there are any errors in the information below, kindly contact the
+              NUN Supprt Team
+              <a
+                href="https://www.nileuniversity.edu.ng/contact-us/?cn-reloaded=1"
+                target="_blank"
+                >here.</a
+              >
+            </h5>
+          </header>
+          <div class="section">
+            <h2>Account Info</h2>
+            <p>
+              <b>UID:</b>
+              <span class="uid"></span>
+            </p>
+            <p>
+              <b>Account Type:</b>
+              <span class="accountType upperCase"></span>
+            </p>
+          </div>
+          <div class="line"></div>
+          <div class="section">
+            <h2>Personal Details</h2>
+            <p>
+              <b>First Name:</b>
+              <span class="firstName upperCase"></span>
+            </p>
+            <p>
+              <b>Middle Name:</b>
+              <span class="middleName upperCase"></span>
+            </p>
+            <p>
+              <b>Last Name:</b>
+              <span class="lastName upperCase"></span>
+            </p>
+            <!-- <p>
+              <b>Gender:</b>
+              <span class="gender upperCase">Male</span>
+            </p> -->
+            <p>
+              <b>Identification Number:</b>
+              <span class="id upperCase"></span>
+            </p>
+          </div>
+          <div class="line"></div>
+          <div class="section">
+            <h2>Contact Information</h2>
+            <p>
+              <b>Email:</b>
+              <span class="email"></span>
+            </p>
+            <p>
+              <b>Mobile Number:</b>
+              <span class="mobile"></span>
+            </p>
+          </div>
+        </div>
+
+        <!-- !!SEPERATION!! -->
+        <footer>
+          <div class="header">
+            <ul class="socials">
+              <li>
+                <button
+                  onclick="window.open('https://web.facebook.com/NileUniversityofNigeria/?_rdc=1&_rdr')"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="window.open('https://www.instagram.com/nileuni/')"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </button>
+              </li>
+              <li>
+                <button onclick="window.open('https://twitter.com/NileUni')">
+                  <i class="fa-brands fa-twitter"></i>
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="window.open('https://www.youtube.com/channel/UC-PeD5lcCgriJ-QHm03j5BA')"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                </button>
+              </li>
+            </ul>
+            <button class="backToTop">
+              <i class="fa-solid fa-angles-up"></i>
+            </button>
+          </div>
+
+          <div class="resources">
+            <h2>Resources</h2>
+            <ul class="links">
+              <li>
+                <a
+                  style="text-decoration: line-through"
+                  href="./feature-unavailable.html"
+                  >Terms and Services</a
+                >
+              </li>
+              <li>
+                <a
+                  style="text-decoration: line-through"
+                  href="./feature-unavailable.html"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  style="text-decoration: line-through"
+                  href="./feature-unavailable.html"
+                  >Customer Support</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://docs.google.com/document/d/1lpaT0z3yvZw88rzL99vY31iAVvVhJyWD_kDdQ4oBH5w/edit?usp=sharing"
+                  >Usage Documentation</a
+                >
+              </li>
+              <li>
+                <a href="../../HTML/devAdminRegistration.html"
+                  >Dev Registration</a
+                >
+              </li>
+              <li>
+                <a
+                  style="text-decoration: line-through"
+                  href="./feature-unavailable.html"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a href="https://www.nileuniversity.edu.ng/">NUN Home</a>
+              </li>
+              <li>
+                <a href="../../index.html">NUN Portal</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="copy">
+            <p>&copy; 2022, Nile University of Nigeria.</p>
+            <img
+              onclick="window.location.href='./landing.html'"
+              src="../Images/Logos/LMS_LG1.svg"
+              height="30px"
+            />
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <div class="notDesktopMode">
+      <h5>
+        PLEASE GO TO DESKTOP VERSION OF SITE OR RESIZE WINDOW ABOVE 1100PX
+      </h5>
+    </div>
+
+    <script>
+      document
+        .querySelector(".welcomeUserImage")
+        .setAttribute("src", sessionStorage.userImageUrl);
+    </script>
+
+    <script src="../Js/auth.prerequisites.lms.js" defer></script>
+    <script src="../Js/auth.state-management.logout.lms.js" defer></script>
+    <script src="../Js/universal.lms.js" defer></script>
+    <script src="../Js/account-data-collection.js" defer></script>
+  </body>
+</html>
+
+<!-- TODO -->
+<!-- 
+  1. Add a new course to the database
+  2. Add a new course to the page
+  3. Add a Width Tracker to ensure the page with does not go lower than the minimum width of the page - 300px
+ -->

@@ -1,0 +1,135 @@
+@import url("./universal.lms.css");
+
+// LOGIN
+
+.loginPageContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    p {
+      text-align: center;
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: "Lato", sans-serif;
+      line-height: 20px;
+
+      i {
+        animation: float 0.5s alternate ease-in-out infinite;
+      }
+    }
+
+    img {
+      height: 50px;
+      margin-right: 25px;
+    }
+  }
+
+  #loginForm {
+    width: 375px;
+    // height: 500px;
+    border-radius: 10px;
+    margin: 20px;
+    border: 1px solid var(--whiteDim);
+    padding: 40px;
+
+    input {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: var(--blackOne);
+      border: 1px solid var(--whiteDim);
+      color: var(--whiteOne);
+      outline: 0;
+      border-radius: 5px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      font-family: "Poppins", sans-serif;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    h3,
+    p {
+      color: var(--green);
+    }
+
+    h3 {
+      margin-top: 35px;
+    }
+
+    p {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .authRow {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-top: 40px;
+      justify-content: space-between;
+
+      button {
+        margin-top: 15px;
+        cursor: pointer;
+        padding: 11px 40px;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid var(--whiteDim);
+        color: rgba(255, 255, 255, 0.5);
+        font-family: "Poppins", sans-serif;
+        font-size: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background: transparent;
+        transition: 0.2s ease;
+
+        &:hover {
+          background: var(--whiteDim);
+          color: var(--whiteOne);
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 12px;
+        // margin-left: 10px;
+        color: rgba(255, 255, 255, 0.5);
+
+        font-weight: bold;
+        transition: 0.3s;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .powered {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 11px;
+      // font-weight: bold;
+      font-family: "Lato", sans-serif;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 0.5px;
+
+      i {
+        margin-left: 3px;
+      }
+    }
+  }
+}

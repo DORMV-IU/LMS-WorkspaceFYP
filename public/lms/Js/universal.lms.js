@@ -4,6 +4,17 @@ const modalBody = document.querySelectorAll(".modalBody");
 const backToTop = document.querySelectorAll(".backToTop");
 const modal_background = document.querySelectorAll(".modal_background");
 const modalOpen = document.querySelectorAll(".modal-open");
+const signOutBtn = document.querySelector("#signOutBtn");
+
+//SETUP GENERAL USER INFO
+document.querySelector(
+  ".userImage"
+).innerHTML = `<img src="${sessionStorage.userImageUrl}" alt="" />`;
+userFirstNameDisplay = document.querySelectorAll(".userFirstName");
+
+userFirstNameDisplay.forEach((name) => {
+  name.textContent = sessionStorage.fullName;
+});
 
 const screenWatcher = () => {
   if (window.innerWidth < 1000) {
@@ -60,6 +71,10 @@ backToTop.forEach((top, i) => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", screenWatcher);
+//SIGN OUT
+signOutBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  auth.signOut();
+});
 
-console.log(sessionStorage.user);
+document.addEventListener("DOMContentLoaded", screenWatcher);

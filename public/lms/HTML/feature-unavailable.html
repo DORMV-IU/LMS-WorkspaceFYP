@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERROR | 501</title>
+
+    <!-- FIREBASE -->
+    <script defer src="/__/firebase/9.8.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.8.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.8.2/firebase-database-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/9.8.2/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-performance-compat.js"
+    ></script>
+
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../CSS/universal.lms.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../Images/Logos/Fav1alt.svg"
+      sizes="20x20"
+    />
+
+    <!-- SCRIPTS -->
+    <script src="../Js/auth.prerequisites.js" defer></script>
+    <script src="../Js/auth.users.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/d72d59cfcd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        background: url("../../Images/BackgroundPatterns/tactile_noise.webp");
+        background-repeat: repeat;
+        background-attachment: fixed;
+      }
+      .notAvailable {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 60vw;
+        border: 1px solid var(--whiteDim);
+        padding: 50px;
+        border-radius: 10px;
+        font-family: "poppins", sans-serif;
+      }
+
+      .notAvailable h3 {
+        font-size: 24px;
+        color: var(--fireBaseGold);
+        letter-spacing: 0.5px;
+      }
+
+      .notAvailable p {
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+
+      .notAvailable button {
+        cursor: pointer;
+        padding: 12px 25px;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid var(--whiteDim);
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        transition: 0.3s;
+        background: transparent;
+      }
+
+      .notAvailable button i {
+        -webkit-animation: L-R 0.5s alternate ease-in-out infinite;
+        animation: L-R 0.5s alternate ease-in-out infinite;
+      }
+
+      .notAvailable button:hover {
+        background: var(--whiteDim);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- !!SEPERATION!! -->
+    <div class="notAvailable">
+      <div>
+        <h3>Error 501</h3>
+        <p>The requested feature is currently unavailable</p>
+        <button id="return" onclick="history.back()">
+          Return <i class="fa-solid fa-arrow-rotate-left"></i>
+        </button>
+      </div>
+    </div>
+    <div class="notDesktopMode"></div>
+    <script>
+      window.addEventListener("load", (e) => {
+        document.querySelector("#return").focus();
+      });
+    </script>
+  </body>
+</html>

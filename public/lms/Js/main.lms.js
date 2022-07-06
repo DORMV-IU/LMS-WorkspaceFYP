@@ -5,41 +5,20 @@ const csBtn = document.querySelector("#csBtn");
 const featured = document.querySelector(".featured");
 const allCourses = document.querySelector(".all-courses");
 const comingSoon = document.querySelector("#coming-soon");
-const signOutBtn = document.querySelector("#signOutBtn");
 const learnMore = document.querySelector("#lm");
 
-const userCoursesBtn = document.querySelector("#userCoursesBtn");
-const homeBtn = document.querySelector("#homeBtn");
-const createCourses = document.querySelector("#createCourses");
-
-const courseThumbnail = document.querySelectorAll(".overlay");
+const coursePageBtn = document.querySelectorAll(".course-open");
 
 let pageHistory;
 
 //PAGE CHANGE LISTENERS
-userCoursesBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  userCoursesBtn.classList.add("active");
-  homeBtn.classList.remove("active");
-  createCourses.classList.remove("active");
-  changePage("#homePage", "#userCourses", ".extra");
-});
 
-homeBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  userCoursesBtn.classList.remove("active");
-  homeBtn.classList.add("active");
-  createCourses.classList.remove("active");
-  changePage("#userCourses", "#homePage", ".extra");
-});
-
-courseThumbnail.forEach((btn) => {
+coursePageBtn.forEach((btn, i) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    userCoursesBtn.classList.remove("active");
-    homeBtn.classList.remove("active");
-    createCourses.classList.remove("active");
-    changePage("#homePage", "#coursePage", "");
+    sessionStorage.courseID = coursePageBtn[i].id;
+    sessionStorage.currentUrl = `./courses.html?${sessionStorage.courseID}`;
+    window.location.href = sessionStorage.currentUrl;
   });
 });
 
@@ -98,18 +77,18 @@ csBtn.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener("scroll", () => {
-  if (window.screenY >= 400) {
-    ftBtn.classList.remove("active");
-    acBtn.classList.add("active");
-    csBtn.classList.remove("active");
-  } else if (window.screenY >= comingSoon.offsetTop - 75) {
-    ftBtn.classList.remove("active");
-    acBtn.classList.remove("active");
-    csBtn.classList.add("active");
-  } else {
-    ftBtn.classList.add("active");
-    acBtn.classList.remove("active");
-    csBtn.classList.remove("active");
-  }
-});
+// window.addEventListener("scroll", () => {
+//   if (window.screenY >= 400) {
+//     ftBtn.classList.remove("active");
+//     acBtn.classList.add("active");
+//     csBtn.classList.remove("active");
+//   } else if (window.screenY >= comingSoon.offsetTop - 75) {
+//     ftBtn.classList.remove("active");
+//     acBtn.classList.remove("active");
+//     csBtn.classList.add("active");
+//   } else {
+//     ftBtn.classList.add("active");
+//     acBtn.classList.remove("active");
+//     csBtn.classList.remove("active");
+//   }
+// });

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Management | Mobile Development | NUN Applications</title>
+
+    <!-- FIREBASE -->
+    <script defer src="/__/firebase/9.8.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.8.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.8.2/firebase-database-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/9.8.2/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.8.2/firebase-performance-compat.js"
+    ></script>
+
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../CSS/courseManagement.lms.css" />
+    <link rel="stylesheet" href="../CSS/footer.css" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../Images/Logos/Fav1alt.svg"
+      sizes="20x20"
+    />
+
+    <!-- SCRIPTS -->
+    <script
+      src="https://kit.fontawesome.com/d72d59cfcd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- !!SEPERATION!! -->
+  <body>
+    <!-- APPLICATION !!SEPERATION!! -->
+
+    <div class="app-container desktopMode">
+      <div class="app-landing">
+        <div class="sidebar" title="sidebar">
+          <header>
+            <img src="../Images/Logos/LMS_LG1.svg" alt="LMS Logo" />
+            <!-- <p>learning Management <br />system</p> -->
+          </header>
+          <div class="menu-items">
+            <ul>
+              <li>
+                <a href="./landing.html"
+                  ><span
+                    ><i class="fa-solid fa-house-chimney"></i> Home</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="./user-courses.html"
+                  ><span
+                    ><i class="fa-solid fa-lines-leaning"></i> My Courses</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  id="courseManagementBtn"
+                  style="display: none"
+                  href="./course-management.html"
+                  class="active"
+                  ><span
+                    ><i class="fa-solid fa-pen"></i> Manage Courses</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="acc-sys-items">
+            <p>
+              learning <br />management <br />system <br /><i
+                class="fa-solid fa-angles-down"
+              ></i>
+            </p>
+          </div>
+        </div>
+
+        <!-- USER COURSES PAGE !!SEPERATION!! -->
+        <div id="userCourses" class="page">
+          <nav>
+            <!-- LEFT SIDE OF NAV -->
+            <ul class="left">
+              <li>
+                <a href="./landing.html"
+                  ><img src="../Images/Logos/LMS_LG1.svg"
+                /></a>
+              </li>
+              <li>
+                <a onclick="history.back()"
+                  ><i class="fa-solid fa-angle-left"></i> Back</a
+                >
+              </li>
+            </ul>
+
+            <!-- RIGHT SIDE OF NAV -->
+            <div class="right">
+              <a href="" class="notify modal-open"
+                ><i class="fa-solid fa-bell"></i
+              ></a>
+              <div class="notifications modalBody">
+                <div class="header">
+                  <h2>Notifications</h2>
+                  <span class="closeBtn"
+                    ><i class="fa-solid fa-xmark"></i
+                  ></span>
+                </div>
+                <div class="line"></div>
+                <div class="no_notif">
+                  <p>There aren't any new notifications</p>
+                </div>
+              </div>
+              <div class="modal_background"></div>
+
+              <form action="../HTML/feature-unavailable.html">
+                <input type="text" />
+                <button>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+              <div class="vertical_line"></div>
+
+              <div class="userImage modal-open"></div>
+              <div class="userInfo modalBody">
+                <div class="header">
+                  <h2 class="userFirstName">Wëndigõ</h2>
+                  <span class="closeBtn"
+                    ><i class="fa-solid fa-xmark"></i
+                  ></span>
+                </div>
+                <div class="line"></div>
+                <ul>
+                  <li><a href="../HTML/user-account.html">Account</a></li>
+                  <li>
+                    <a
+                      href="../HTML/feature-unavailable.html"
+                      style="text-decoration: line-through"
+                      >Settings</a
+                    >
+                  </li>
+                </ul>
+                <div class="line"></div>
+                <ul>
+                  <li>
+                    <a
+                      href="https://docs.google.com/document/d/1-UjW_NaIEtf2V6xxVSGgmmlRwVKNC_SlH0oBDTixOXg/edit?usp=sharing"
+                      target="_blank"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../HTML/feature-unavailable.html"
+                      style="text-decoration: line-through"
+                      >Terms of Service</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../HTML/feature-unavailable.html"
+                      style="text-decoration: line-through"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                </ul>
+                <div class="line"></div>
+                <ul>
+                  <li>
+                    <a id="signOutBtn" href="">Sign Out</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="modal_background"></div>
+            </div>
+          </nav>
+
+          <div class="content content-scroll">
+            <div class="banner">
+              <div class="welcome">
+                <h3>Course Management</h3>
+                <p>
+                  <b>Create</b>, <b>View</b> and <b>Edit</b> Course Information
+                </p>
+                <button id="lm"><i class="fa-solid fa-angles-down"></i></button>
+              </div>
+            </div>
+
+            <div class="content-container">
+              <div class="section-links">
+                <a href="#" class="tabBtn">Created Courses</a>
+                <a href="./feature-unavailable.html" class="active tabBtn"
+                  >Create A Course</a
+                >
+              </div>
+
+              <div class="tab created-courses">
+                <p>There are currently no courses created</p>
+              </div>
+              <div class="tab create-a-course">
+                <form id="creation">
+                  <div class="fieldsets">
+                    <!-- GENERAL !!SEPERATION!! -->
+                    <fieldset id="general-information">
+                      <h2>
+                        General Information
+                        <i class="fa-solid fa-lines-leaning"></i>
+                      </h2>
+
+                      <label>Course Title</label>
+                      <input type="text" id="courseTitle" required />
+
+                      <label>Brief Description</label>
+                      <input type="text" id="briefDescription" required />
+
+                      <label for="category">Course Category</label><br />
+                      <select name="category" id="courseCategory" required>
+                        <option value="Programming">Programming</option>
+                        <option value="Web Design">Web Design</option>
+                        <option value="Network & Security">
+                          Network & Security
+                        </option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                      </select>
+
+                      <div class="addables-header">
+                        <label>Learning Objectives</label>
+                        <div class="add-remove">
+                          <button
+                            id="lo-remove"
+                            class="removeBtn"
+                            title="Remove Learning Objective"
+                          >
+                            <i class="fa-solid fa-minus"></i>
+                          </button>
+                          <button id="lo-add" title="Add Learning Objective">
+                            <i class="fa-solid fa-plus"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="learning-objectives addables">
+                        <input
+                          id="lo-1"
+                          type="text"
+                          placeholder="Learning Objective 1"
+                          required
+                        />
+                      </div>
+
+                      <div class="addables-header">
+                        <label>Course Requirements</label>
+                        <div class="add-remove">
+                          <button
+                            id="cr-remove"
+                            class="removeBtn"
+                            title="Remove Course Requirement"
+                          >
+                            <i class="fa-solid fa-minus"></i>
+                          </button>
+                          <button id="cr-add" title="Add Course Requirement">
+                            <i class="fa-solid fa-plus"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="course-requirements addables">
+                        <input
+                          id="cr-1"
+                          type="text"
+                          placeholder="Course Requirement 1"
+                          required
+                        />
+                      </div>
+
+                      <label>Full Description</label>
+                      <textarea id="fullDescription"></textarea>
+
+                      <label>Author Notes</label>
+                      <textarea id="authorNotes"></textarea>
+
+                      <label>Course Thumbnail Image</label>
+                      <input
+                        type="file"
+                        style="cursor: pointer"
+                        id="thumbnail"
+                        accept="image/*"
+                        required
+                      />
+
+                      <p class="txt">
+                        Once concluded, move to the next page
+                        <i class="fa-solid fa-angle-right"></i>
+                      </p>
+                    </fieldset>
+
+                    <!-- LECTURE !!SEPERATION!! -->
+                    <fieldset id="lecture-information">
+                      <h2>
+                        Lecture Modules<i class="fa-solid fa-chalkboard"></i>
+                      </h2>
+
+                      <div class="lectures">
+                        <div id="lt-1" class="lecture">
+                          <div class="lt-header">
+                            <h3>#<span class="lt-number">1</span></h3>
+                            <input
+                              type="text"
+                              id="lt-1-title"
+                              placeholder="Lecture Title"
+                            />
+                          </div>
+
+                          <label>Lecture Description</label>
+                          <textarea id="lecture-1-description"></textarea>
+
+                          <label>Lecture Video File</label>
+                          <input
+                            type="file"
+                            style="cursor: pointer"
+                            id="lt-1-video"
+                            accept="video/*"
+                            required
+                          />
+
+                          <!-- <div class="addables-header">
+                            <label>File Resources</label>
+                            <div class="add-remove">
+                              <button
+                                class="fr-remove"
+                                class="removeBtn"
+                                title="Remove File Resource"
+                              >
+                                <i class="fa-solid fa-minus"></i>
+                              </button>
+                              <button class="fr-add" title="Add File Resource">
+                                <i class="fa-solid fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="file-resources addables">
+                            <input
+                              id="fr-1"
+                              type="file"
+                              accept="application/*"
+                              required
+                            />
+                          </div> -->
+                        </div>
+                      </div>
+
+                      <div class="lt-addables">
+                        <button id="lt-add" title="Add Lecture Module">
+                          Add New Module<i class="fa-solid fa-plus"></i>
+                        </button>
+                        <button
+                          id="lt-remove"
+                          style="display: none"
+                          title="Remove Lecture Module"
+                        >
+                          Remove Last Module<i class="fa-solid fa-minus"></i>
+                        </button>
+                      </div>
+
+                      <!-- !!SEPERATION!! -->
+                      <button class="submit modal-open">
+                        <i class="fa-solid fa-check-double"></i> Create Course
+                      </button>
+                      <div class="submitModal modalBody">
+                        <div class="header">
+                          <h4>Create A Course</h4>
+                          <span class="closeBtn">
+                            <i class="fa-solid fa-xmark"></i>
+                          </span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="submission-in-progress">
+                          <div class="loader-div">
+                            <div class="loader"></div>
+                            <i
+                              class="fa-solid fa-school-circle-check completed-icon"
+                            ></i>
+                          </div>
+                          <p class="loading-message">Creating Course...</p>
+                        </div>
+                        <div class="submit-box">
+                          <p>
+                            Are you sure you are ready to submit?<br />Close
+                            modal if "No"
+                          </p>
+                          <input type="submit" value="Create +" />
+                        </div>
+                      </div>
+                      <div
+                        class="modal_background"
+                        style="background: rgba(0, 0, 0, 0.5)"
+                      ></div>
+                    </fieldset>
+                  </div>
+                  <div class="controls">
+                    <button id="form-left">
+                      <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <span class="pageNumber">1</span>
+                    <button id="form-right">
+                      <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- !!SEPERATION!! -->
+            <footer>
+              <div class="header">
+                <ul class="socials">
+                  <li>
+                    <button
+                      onclick="window.open('https://web.facebook.com/NileUniversityofNigeria/?_rdc=1&_rdr')"
+                    >
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onclick="window.open('https://www.instagram.com/nileuni/')"
+                    >
+                      <i class="fa-brands fa-instagram"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onclick="window.open('https://twitter.com/NileUni')"
+                    >
+                      <i class="fa-brands fa-twitter"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onclick="window.open('https://www.youtube.com/channel/UC-PeD5lcCgriJ-QHm03j5BA')"
+                    >
+                      <i class="fa-brands fa-youtube"></i>
+                    </button>
+                  </li>
+                </ul>
+                <button class="backToTop">
+                  <i class="fa-solid fa-angles-up"></i>
+                </button>
+              </div>
+
+              <div class="resources">
+                <h2>Resources</h2>
+                <ul class="links">
+                  <li>
+                    <a
+                      style="text-decoration: line-through"
+                      href="../HTML/feature-unavailable.html"
+                      >Terms and Services</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      style="text-decoration: line-through"
+                      href="../HTML/feature-unavailable.html"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      style="text-decoration: line-through"
+                      href="../HTML/feature-unavailable.html"
+                      >Customer Support</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://docs.google.com/document/d/1lpaT0z3yvZw88rzL99vY31iAVvVhJyWD_kDdQ4oBH5w/edit?usp=sharing"
+                      >Usage Documentation</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../../HTML/devAdminRegistration.html"
+                      >Dev Registration</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      style="text-decoration: line-through"
+                      href="../HTML/feature-unavailable.html"
+                      >News</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.nileuniversity.edu.ng/">NUN Home</a>
+                  </li>
+                  <li><a href="../../index.html">NUN Portal</a></li>
+                </ul>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="copy">
+                <p>&copy; 2022, Nile University of Nigeria.</p>
+                <img
+                  onclick="window.location.href='./landing.html'"
+                  src="../Images/Logos/LMS_LG1.svg"
+                  height="30px"
+                />
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <div class="notDesktopMode">
+      <h5>
+        PLEASE GO TO DESKTOP VERSION OF SITE OR RESIZE WINDOW ABOVE 1100PX
+      </h5>
+    </div>
+    <script src="../Js/app.lms.js"></script>
+
+    <script src="../Js/auth.prerequisites.lms.js" defer></script>
+    <script src="../Js/auth.state-management.logout.lms.js" defer></script>
+    <script src="../Js/universal.lms.js" defer></script>
+    <script src="../Js/main.lms.js" defer></script>
+    <script src="../Js/course-management.js" defer></script>
+  </body>
+</html>
+
+<!-- TODO -->
+<!-- 
+  1. Add a new course to the database
+  2. Add a new course to the page
+  3. Add a Width Tracker to ensure the page with does not go lower than the minimum width of the page - 300px
+ -->

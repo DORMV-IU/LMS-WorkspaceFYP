@@ -1,0 +1,163 @@
+@import url("./universal.lms.css");
+.loginPageContainer {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginPageContainer .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.loginPageContainer .title p {
+  text-align: center;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Lato", sans-serif;
+  line-height: 20px;
+}
+
+.loginPageContainer .title p i {
+  -webkit-animation: float 0.5s alternate ease-in-out infinite;
+          animation: float 0.5s alternate ease-in-out infinite;
+}
+
+.loginPageContainer .title img {
+  height: 50px;
+  margin-right: 25px;
+}
+
+.loginPageContainer #loginForm {
+  width: 375px;
+  border-radius: 10px;
+  margin: 20px;
+  border: 1px solid var(--whiteDim);
+  padding: 40px;
+}
+
+.loginPageContainer #loginForm input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: var(--blackOne);
+  border: 1px solid var(--whiteDim);
+  color: var(--whiteOne);
+  outline: 0;
+  border-radius: 5px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+.loginPageContainer #loginForm input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loginPageContainer #loginForm input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loginPageContainer #loginForm input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loginPageContainer #loginForm input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loginPageContainer #loginForm h3,
+.loginPageContainer #loginForm p {
+  color: var(--green);
+}
+
+.loginPageContainer #loginForm h3 {
+  margin-top: 35px;
+}
+
+.loginPageContainer #loginForm p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.loginPageContainer #loginForm .authRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.loginPageContainer #loginForm .authRow button {
+  margin-top: 15px;
+  cursor: pointer;
+  padding: 11px 40px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--whiteDim);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: transparent;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.loginPageContainer #loginForm .authRow button:hover {
+  background: var(--whiteDim);
+  color: var(--whiteOne);
+}
+
+.loginPageContainer #loginForm .authRow a {
+  text-decoration: none;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.loginPageContainer #loginForm .authRow a:hover {
+  text-decoration: underline;
+}
+
+.loginPageContainer #loginForm .powered {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 11px;
+  font-family: "Lato", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.loginPageContainer #loginForm .powered i {
+  margin-left: 3px;
+}
+/*# sourceMappingURL=login.lms.css.map */
