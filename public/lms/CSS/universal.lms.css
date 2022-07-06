@@ -166,7 +166,63 @@ body {
             transform: translateY(2px);
   }
 }
+/* Time Table */
+.table-div {
+  Width: 100%;
+  height: 50%;
+  border: 1px solid;
+  border-radius: 25px;
+}
+.table-div > tr, td {
+  border-radius: 25px;
+}
+.days {
+  border: 1px solid;
+  background-color: grey;
+  border-radius: 0px;
+}
+.actve {
+  color: black;
+  background-color: lightgrey;
+  border-radius: 0px;
+  border: 1px solid;
+}
+/* Courses Page */
+.sort-course {
+  width: 100%;
+  padding: 10px;
+  padding-left: 100px;
+  margin-bottom: 30px;
+}
+#Search, #sort {
+ height: 40px;
+ width: 160px;
+ background-color: #2a2a2a;
+ color: #6f6e6b;
+ border-radius: 100px;
+ border: solid 0px;
+ padding-left: 10px;
+ margin-left: 5px;
+ margin-right: 50px;
+}
+.course-list {
+  overflow:scroll;
+  padding: 30px;
+  overflow-x:hidden;
+  width: 100%;
+  height: 700px;
+}
+.card {
+  height:250px;
+  margin-bottom: 40px;
+  border-radius: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  left: -1px;
+  padding: 10px;
+  display: flex;
 
+<<<<<<< HEAD
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg);
@@ -189,6 +245,88 @@ body {
   }
 }
 
+=======
+  /* background-image: url(https://www.willmaster.com/library/images/background-sample-50.jpg); */
+}
+.cs-image{
+ background-color: #2a2a2a;
+ height:100%;
+ width: 250px;
+ margin-top: 0px;
+}
+.cs-desc{
+  background-color: #2a2a2a;
+  height:100%;
+  width: 100%;
+  padding: 10px;
+}
+.btn {
+  background-color: #4e4e4e; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin-left: 90%;
+  margin-top: -20%;
+  font-size: 16px;
+  justify-self: end;
+  border-radius: 60px;
+  cursor: pointer;
+}
+.btn:hover {
+  color: #121212;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  transition: 0.5s;
+  background-color: #e7e7e7;
+}
+.btn:hover:after {
+  opacity: 1;
+  content: " Start";
+  color: #1a1a1a;
+  right: 10px;
+  transition: 0.5s;
+
+}
+img {
+  width: 100%;
+  height: 100%; 
+  object-fit: contain;
+}
+.progress {
+  background-color: rgb(192, 192, 192);
+  width: 50%;
+  border-radius: 20px;
+}
+
+.skill {
+  background-color: rgb(116, 194, 92);
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 15px;
+  border-radius: 20px;
+}
+
+.one {
+  width: 80%;
+}
+
+.two {
+  width: 63%;
+}
+
+.three {
+  width: 45%;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+.four {
+  width: 15%;
+}
+>>>>>>> fa7474cb8e7f4e06ba694f6031f6f82d0c349ebc
 .notDesktopMode {
   display: none;
   position: absolute;
