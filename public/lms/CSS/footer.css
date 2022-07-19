@@ -82,6 +82,7 @@ footer .copy p {
 }
 
 footer .copy img {
+  height: 25px;
   opacity: 0.5;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;

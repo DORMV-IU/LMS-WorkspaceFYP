@@ -631,6 +631,11 @@
           justify-content: space-between;
 }
 
+.app-container .app-landing .page .content .all-courses .courses .course-row .txt {
+  font: italic 10px "Poppins", sans-serif;
+  color: var(--whiteDim);
+}
+
 .app-container .app-landing .page .content .all-courses .courses .course-row .course {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -692,6 +697,8 @@
 
 .app-container .app-landing .page .content .all-courses .courses .course-row .course .thumbnail .overlay:hover {
   background-color: rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
 }
 
 .app-container .app-landing .page .content .all-courses .courses .course-row .course .thumbnail .overlay:hover i {

@@ -206,13 +206,20 @@ creation.addEventListener("submit", (e) => {
   let submittedThumbnail = false;
   let submittedInfo = false;
 
+  function urlReadyTitleFunc(title) {
+    const scan1 = title.replace(/\s+/g, "-");
+    const scan2 = scan1.replace("/", "%%");
+    const scan3 = encodeURI(scan2);
+    return scan3;
+  }
+
   // DISPLAY LOADING
   submitBox.style.display = "none";
   submissionInPprogressBox.style.display = "flex";
 
   // GENERAL INFORMATION
   const courseTitle = document.querySelector("#courseTitle").value;
-  const urlReadyTitle = courseTitle.toLowerCase().replace(/\s+/g, "-");
+  const urlReadyTitle = urlReadyTitleFunc(courseTitle.toLowerCase());
   const briefDescription = document.querySelector("#briefDescription").value;
   const courseCategory = document.querySelector("#courseCategory").value;
 
@@ -236,11 +243,6 @@ creation.addEventListener("submit", (e) => {
   const fullDescription = document.querySelector("#fullDescription").value;
   const authorNotes = document.querySelector("#authorNotes").value;
 
-  const thumbnailImg = document.querySelector("#thumbnail").files[0];
-  const thumbnailImgRef = thumbnailRef.child(`thumbnail`);
-
-  storeMedia(thumbnailImg, thumbnailImgRef, "thumb", 1);
-
   // LECTURE INFORMATION
   let lectureObj = {};
 
@@ -254,38 +256,66 @@ creation.addEventListener("submit", (e) => {
       title: lectureTitle,
       description: lectureDescription,
     };
-
-    const lectureVideo = document.querySelector(`#lt-${i + 1}-video`).files[0];
-    const lectureVideoRef = videoRef.child(`lecture-video-${i + 1}`);
-
-    if (i < ltCount - 1) {
-      storeMedia(lectureVideo, lectureVideoRef, "dud", i + 1);
-    } else {
-      storeMedia(lectureVideo, lectureVideoRef, "video", i + 1);
-    }
   }
 
-  // STORE INFORMATION
   db.collection("courses")
     .doc(urlReadyTitle)
-    .set({
-      courseTitle: courseTitle,
-      urlReadyTitle: urlReadyTitle,
-      briefDescription: briefDescription,
-      courseCategory: courseCategory,
-      learningObjectives: learningObjectives,
-      courseRequirements: courseRequirements,
-      fullDescription: fullDescription,
-      authorNotes: authorNotes,
-      lectures: lectureObj,
-      creator: sessionStorage.fullName,
-    })
-    .then(() => {
-      submittedInfo = true;
-      checkIfSubmitted();
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        ifError("Course already exists");
+        return 0;
+      } else {
+        // STORE INFORMATION
+        db.collection("courses")
+          .doc(urlReadyTitle)
+          .set({
+            courseTitle: courseTitle,
+            urlReadyTitle: urlReadyTitle,
+            briefDescription: briefDescription,
+            courseCategory: courseCategory,
+            learningObjectives: learningObjectives,
+            courseRequirements: courseRequirements,
+            fullDescription: fullDescription,
+            authorNotes: authorNotes,
+            lectures: lectureObj,
+            activeStatus: true,
+            author: sessionStorage.fullName,
+            authorUid: sessionStorage.userEmail,
+            dateCreated: firebase.firestore.FieldValue.serverTimestamp(),
+          })
+          .then(() => {
+            submittedInfo = true;
+            checkIfSubmitted();
+
+            //THUMBNAIL SUBMISSION
+            const thumbnailImg = document.querySelector("#thumbnail").files[0];
+            const thumbnailImgRef = thumbnailRef.child(`thumbnail`);
+
+            storeMedia(thumbnailImg, thumbnailImgRef, "thumb", 1);
+
+            //VIDEO SUBMISSION
+            for (let i = 0; i < ltCount; i++) {
+              const lectureVideo = document.querySelector(`#lt-${i + 1}-video`)
+                .files[0];
+              const lectureVideoRef = videoRef.child(`lecture-video-${i + 1}`);
+
+              if (i < ltCount - 1) {
+                storeMedia(lectureVideo, lectureVideoRef, "dud", i + 1);
+              } else {
+                storeMedia(lectureVideo, lectureVideoRef, "video", i + 1);
+              }
+            }
+          })
+          .catch((error) => {
+            ifError(error.message);
+            return 0;
+          });
+      }
     })
     .catch((error) => {
-      alert("Error: " + error.message);
+      ifError(error.message);
+      return 0;
     });
 
   // DISPLAY COMPLETE
@@ -304,8 +334,9 @@ creation.addEventListener("submit", (e) => {
 
           checkIfSubmitted();
         })
-        .catch((err) => {
-          console.log(err.message);
+        .catch((error) => {
+          ifError(error.message);
+          return 0;
         });
     });
   }
@@ -325,11 +356,25 @@ creation.addEventListener("submit", (e) => {
       document.querySelector(".loading-message").innerHTML = "Course Created!";
       setTimeout(() => {
         document.querySelector(".loading-message").innerHTML =
-          "Course Complete!";
+          "Page Reloading...";
       }, 3000);
       setTimeout(() => {
         location.reload();
       }, 10000);
     }
+  }
+
+  function ifError(message) {
+    loader.style.display = "none";
+    document.querySelector(".error-icon").style.display = "block";
+    document.querySelector(
+      ".loading-message"
+    ).innerHTML = `Error! try again in 10s. 
+    <br>Message: ${message}`;
+
+    setTimeout(() => {
+      submitBox.style.display = "block";
+      submissionInPprogressBox.style.display = "none";
+    }, 10000);
   }
 });

@@ -1,6 +1,6 @@
 auth.onAuthStateChanged((user) => {
   db.collection("users")
-    .doc(user.uid)
+    .doc(user.email)
     .get()
     .then((userdata) => {
       if (userdata) {

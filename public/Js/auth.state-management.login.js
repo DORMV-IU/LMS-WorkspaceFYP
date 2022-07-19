@@ -4,7 +4,7 @@ auth.onAuthStateChanged((user) => {
 
     //COLLECT DATA FROM THE USERS COLLECTION
     db.collection("users")
-      .doc(user.uid)
+      .doc(user.email)
       .get()
       .then(
         (doc) => {

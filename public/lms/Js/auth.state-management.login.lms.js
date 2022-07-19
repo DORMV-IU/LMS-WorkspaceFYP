@@ -4,7 +4,7 @@ auth.onAuthStateChanged((user) => {
   if (user) {
     //store user data for later use in session storage
     db.collection("users")
-      .doc(user.uid)
+      .doc(user.email)
       .get()
       .then((doc) => {
         sessionStorage.setItem("accountType", doc.data().accountType);
@@ -13,9 +13,10 @@ auth.onAuthStateChanged((user) => {
           doc.data().accountTypeData.firstName +
           " " +
           doc.data().accountTypeData.lasttName;
+        sessionStorage.setItem("userEmail", user.email);
 
         userImageRef
-          .child(`${user.uid}/profile.jpg`)
+          .child(`${user.email}/profile.jpg`)
           .getDownloadURL()
           .then(function (url) {
             sessionStorage.userImageUrl = url;

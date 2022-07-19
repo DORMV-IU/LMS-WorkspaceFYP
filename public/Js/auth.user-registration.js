@@ -29,9 +29,9 @@ registrationForm.addEventListener("submit", (e) => {
         lasttName: document.querySelector("#studentNameLast").value,
         phone: document.querySelector("#studentPhone").value,
         department: document.querySelector("#studentDepartment").value,
-        identificationNumber: document.querySelector(
-          "#studentIdentificationNumber"
-        ).value,
+        identificationNumber: Number(
+          document.querySelector("#studentIdentificationNumber").value
+        ),
       };
     } else if (typeOfAccount === "personnel") {
       accountTypeData = {
@@ -66,19 +66,19 @@ registrationForm.addEventListener("submit", (e) => {
         let fileRef;
 
         if (selectedFile) {
-          fileRef = userImageRef.child(`${credentials.user.uid}/profile.jpg`);
+          fileRef = userImageRef.child(`${credentials.user.email}/profile.jpg`);
           fileRef.put(selectedFile).then(() => {
             userImageRef
-              .child(`${credentials.user.uid}/profile.jpg`)
+              .child(`${credentials.user.email}/profile.jpg`)
               .getDownloadURL()
               .then(function (url) {
                 return db
                   .collection("users")
-                  .doc(credentials.user.uid)
+                  .doc(credentials.user.email)
                   .set({
                     accountType: typeOfAccount,
                     accountTypeData: accountTypeData,
-                    created: new Date().toLocaleDateString("en-GB", {
+                    dateCreated: new Date().toLocaleDateString("en-GB", {
                       day: "numeric",
                       month: "short",
                       year: "numeric",
@@ -89,7 +89,7 @@ registrationForm.addEventListener("submit", (e) => {
                     if (typeOfAccount === "admin") {
                       return db
                         .collection("adminKeys")
-                        .doc(credentials.user.id)
+                        .doc(credentials.user.email)
                         .set({
                           key: document.querySelector("#genKeyInput").value,
                         })

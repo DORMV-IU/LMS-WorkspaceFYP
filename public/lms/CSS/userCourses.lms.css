@@ -597,4 +597,202 @@
   -webkit-animation: float 0.5s alternate ease-in-out infinite;
           animation: float 0.5s alternate ease-in-out infinite;
 }
+
+.all-courses {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.all-courses .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.all-courses .title .heading {
+  width: 100%;
+  text-decoration: none;
+  color: var(--whiteOne);
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--whiteDim);
+}
+
+.all-courses .courses {
+  width: 100%;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.all-courses .courses .course-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.all-courses .courses .course-row .txt {
+  font: italic 10px "Poppins", sans-serif;
+  color: var(--whiteDim);
+}
+
+.all-courses .courses .course-row .course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(90% / 4);
+  border-radius: 10px;
+  margin-bottom: 27.5px;
+  cursor: pointer;
+}
+
+.all-courses .courses .course-row .course .thumbnail {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 125px;
+  border-radius: 10px;
+  -webkit-box-shadow: var(--insetHardShadows);
+          box-shadow: var(--insetHardShadows);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.all-courses .courses .course-row .course .thumbnail .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: var(--insetHardShadows);
+          box-shadow: var(--insetHardShadows);
+}
+
+.all-courses .courses .course-row .course .thumbnail .overlay i {
+  opacity: 0;
+}
+
+.all-courses .courses .course-row .course .thumbnail .overlay:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.all-courses .courses .course-row .course .thumbnail .overlay:hover i {
+  opacity: 1;
+  -webkit-animation: L-R 0.5s alternate ease-in-out infinite;
+          animation: L-R 0.5s alternate ease-in-out infinite;
+}
+
+.all-courses .courses .course-row .course .thumbnail .cs_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 45px;
+  border-top: 1px solid var(--whiteDim);
+  border-radius: 0 0 10px 10px;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--whiteOne);
+  font-family: "Poppins", sans-serif;
+}
+
+.all-courses .courses .course-row .course .info {
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 40px;
+}
+
+.all-courses .courses .course-row .course .info h2 {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--whiteOne);
+  margin-bottom: 12px;
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.all-courses .courses .course-row .course .info .description {
+  width: 100%;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.all-courses .courses .course-row .course .info .creator {
+  margin-top: 9px;
+  width: 100%;
+  font-size: 9px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+}
 /*# sourceMappingURL=userCourses.lms.css.map */

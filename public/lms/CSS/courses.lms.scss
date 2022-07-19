@@ -448,10 +448,6 @@
     // border: 1px solid var(--whiteDim);
     margin-bottom: 50px;
     border-radius: 10px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0)),
-      url("../Images/Default_Thumbnails/pexels-anna-nekrashevich-6801648.jpg");
-    background-position: center;
-    background-size: cover;
     box-shadow: var(--insetSoftShadows);
     display: flex;
     padding: 75px;
@@ -499,13 +495,13 @@
         // }
 
         &.categories {
-          color: rgba(255, 255, 255, 0.75);
           font-size: 11px;
           margin: 10px 0;
           letter-spacing: 1px;
 
           .mainPage,
           .category {
+            color: rgba(255, 255, 255, 0.75);
             text-transform: capitalize;
             cursor: pointer;
             transition: 0.2s ease-out;
@@ -535,12 +531,12 @@
         height: 40px;
         outline: none;
         border-radius: 5px;
-        border: 1px solid var(--whiteDim);
+        border: 1px solid var(--whiteSemiDim);
         color: var(--whiteOne);
         font-family: "Poppins", sans-serif;
         font-size: 12px;
         letter-spacing: 0.5px;
-        background: transparent;
+        background: rgba(0, 0, 0, 0.25);
         transition: 0.2s ease;
 
         i {
@@ -564,7 +560,7 @@
     border-radius: 10px;
     display: flex;
     font-family: "Poppins", sans-serif;
-    // display: none;
+    display: none;
 
     .left-side {
       width: calc(2 * (100% / 3));
@@ -703,7 +699,7 @@
 
         .accolades {
           font-weight: 300;
-          font-size: 14px;
+          font-size: 10px;
           letter-spacing: 0.5px;
         }
 
@@ -774,7 +770,7 @@
 
         .content-set {
           width: 100%;
-          height: 300px;
+          height: auto;
           overflow-y: auto;
           display: flex;
           flex-direction: column;
@@ -861,7 +857,7 @@
     border-radius: 10px;
     display: flex;
     font-family: "Poppins", sans-serif;
-    display: none;
+    // display: none;
 
     .left-side {
       width: calc(2 * (100% / 3));
@@ -1088,6 +1084,16 @@
         border: 0;
         transition: 0.2s ease-out;
 
+        .loader {
+          display: none;
+          width: 22.5px;
+          height: 22.5px;
+          border-radius: 50%;
+          border: 1px solid var(--whiteDim);
+          border-top: 1px solid var(--whiteOne);
+          animation: rotate 0.75s infinite linear;
+        }
+
         &.enroll-enabled {
           background-color: transparent;
           border: 1px solid var(--whiteDim);
@@ -1110,6 +1116,32 @@
 
           &:hover i {
             opacity: 1;
+          }
+        }
+
+        &.loading {
+          border: 1px solid var(--whiteDim);
+          background-color: transparent;
+          cursor: default;
+          color: var(--blackOne);
+
+          .loader {
+            display: block;
+          }
+
+          .btnTxt,
+          i {
+            display: none;
+          }
+
+          &:hover {
+            border: 1px solid var(--whiteDim);
+            background-color: transparent;
+
+            .btnTxt,
+            i {
+              display: none;
+            }
           }
         }
       }

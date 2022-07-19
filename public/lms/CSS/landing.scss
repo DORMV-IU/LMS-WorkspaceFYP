@@ -536,6 +536,11 @@
               // border: 1px solid green;
               justify-content: space-between;
 
+              .txt {
+                font: italic 10px "Poppins", sans-serif;
+                color: var(--whiteDim);
+              }
+
               .course {
                 display: flex;
                 flex-direction: column;
@@ -575,6 +580,7 @@
 
                     &:hover {
                       background-color: rgba(0, 0, 0, 0.75);
+                      backdrop-filter: blur(1px);
                     }
 
                     &:hover i {
