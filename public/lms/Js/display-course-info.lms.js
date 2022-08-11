@@ -165,7 +165,7 @@ function displayLectures() {
 
       contentSet.innerHTML = html;
 
-      //SWITCH LECTURES
+      //SWITCH LECTURES !!SEPERATION!!
       const contentButtons = document.querySelectorAll(".content-button");
       contentButtons.forEach((btn, x) => {
         btn.addEventListener("click", (e) => {
@@ -190,7 +190,7 @@ function displayLectures() {
                 `;
               activeVideo.load();
 
-              document.querySelector("#lectureTitle").innerHTML = `#1: ${
+              document.querySelector("#lectureTitle").innerHTML = `#${x + 1}: ${
                 lectureObj["lt-" + (x + 1)].title
               }`;
 
