@@ -16,7 +16,7 @@ logout.addEventListener("click", () => {
 
 function displayUserInfo(user) {
   db.collection("users")
-    .doc(user.uid)
+    .doc(user.email)
     .get()
     .then((doc) => {
       username.innerHTML = `${doc.data().accountTypeData.firstName}`;
@@ -29,7 +29,7 @@ function displayUserInfo(user) {
     });
 
   userImageRef
-    .child(`${user.uid}/profile.jpg`)
+    .child(`${user.email}/profile.jpg`)
     .getDownloadURL()
     .then(function (url) {
       document.querySelector(".userImage").src = url;
